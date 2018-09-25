@@ -10,6 +10,7 @@ This theme, like WordPress, is licensed under the GPL.
 
 ul{
 	padding:0px;
+	margin:0px;
 	list-style:none;
 }
 a{
@@ -41,4 +42,24 @@ article.post{
 	padding:10px;
 	border:1px solid #000;
 	background:#ccc;
+}
+span.parent-link{
+float: left;
+    border-right: 1px solid #ccc;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 3px 10px 3px 0px;
+}
+.short_nav{
+	    display: table;
+    width: 100%;
+}
+.short_nav ul li{
+	float:left;
+	padding:5px 10px;
+	
+}
+.short_nav ul li a{
+    font-size: 18px;
+    color: #36a3e4;
 }
