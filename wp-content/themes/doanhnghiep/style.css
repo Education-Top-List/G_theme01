@@ -1,0 +1,44 @@
+/*
+Theme Name: Tenten
+Author: Hoàng Trường Giang - 0363349096
+Description: Lập trình viên Front End, chuyên cắt html, css, responsive website. 
+Version: 1.0
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+
+ul{
+	padding:0px;
+	list-style:none;
+}
+a{
+	text-decoration: none;
+}
+.container{
+	max-width: 1160px;
+	margin:0px auto;
+}
+.nav_primary ul li {
+	float:left;
+}
+.nav_primary ul li a{
+	display:inline-block;
+	padding:10px;
+	color:#000;
+}
+article.post{
+	clear:both;
+}
+.nav_primary ul li a:hover{
+	color:#fff;
+	background:#00AEE8;
+}
+#content{
+	clear: both;
+}
+.box_note_right{
+	padding:10px;
+	border:1px solid #000;
+	background:#ccc;
+}
