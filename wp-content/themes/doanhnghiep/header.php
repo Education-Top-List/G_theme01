@@ -19,5 +19,8 @@
 				?>
 				<?php wp_nav_menu($args); ?>
 			</nav>
+			<div class="search_header">
+				<?php get_search_form(); ?>
+			</div>
 		</div>
 	</header>

@@ -33,5 +33,13 @@
 function custom_excerpt_length( $length ) {
 	return 20;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+add_filter('excerpt_length', 'custom_excerpt_length');
+
+	// Add featured image support
+	function featured_images_setup(){
+		add_theme_support('post-thumbnails');
+		add_image_size('small-thumbnail',180,120,true);
+		add_image_size('banner-image',920,110,true);
+	}
+	add_action('after_setup_theme','featured_images_setup');
 ?>

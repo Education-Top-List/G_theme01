@@ -29,7 +29,11 @@ get_header();
 							?>
 						</p>
 					</div>
-					
+					<div class="post_avt">
+						<div class="wrap_post_avt">
+							<?php //the_post_thumbnail();?>
+						</div>
+					</div>
 					
 					<p><?php echo the_content(); ?></p>
 				</article>

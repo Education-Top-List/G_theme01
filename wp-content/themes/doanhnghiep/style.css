@@ -63,3 +63,16 @@ float: left;
     font-size: 18px;
     color: #36a3e4;
 }
+.list_post_item{
+	clear: both;
+}
+.list_post_item .thumbnail{
+	margin:0px 30px 0px 0px;
+	float:left;
+	max-width: 300px;
+	overflow:hidden;
+}
+.list_post_item .thumbnail img{
+	max-width: 100%;
+	height: auto;
+}
