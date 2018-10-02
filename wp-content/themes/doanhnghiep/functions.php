@@ -1,9 +1,9 @@
 <?php
 
 function zingvn_resources(){
+	wp_enqueue_style ('bootstrap-style', get_template_directory_uri().'/css/bootstrap.min.css', array(),'1.0');
 	wp_enqueue_style ('style', get_template_directory_uri().'/style.css');
 	wp_enqueue_style ('font-awesome', get_template_directory_uri().'/css/font-awesome.min.css');
-	wp_enqueue_style ('bootstrap-style', get_template_directory_uri().'/css/bootstrap.min.css', array(),'1.0');
 }
 
 add_action('wp_enqueue_scripts','zingvn_resources');

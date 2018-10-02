@@ -17,9 +17,20 @@ ul{
 a, a:hover{
 	text-decoration: none !important;
 }
+a:hover{
+    color:#f0a52b;
+}
 .container{
 	max-width: 1160px;
 	margin:0px auto;
+}
+.thumbnail{
+        overflow: hidden;
+    padding: 0px;
+    border: none;
+    background: none;
+    border-radius: 0px;
+    margin:0px;
 }
 .nav_primary ul li {
 	float:left;
@@ -40,6 +51,48 @@ article.post{
 #content{
 	clear: both;
 }
+
+/* CSS HEADER */
+.logo_site{
+    max-width: 80px;
+    float:left;
+}
+.logo_site img{
+    max-width: 100%;
+    height:auto;
+}
+.nav_primary{
+    float: left;
+    margin:19px 0px 0px 10px;    
+}
+.search_header{
+         float: right;
+    margin: 23px 0px 0px 0px;
+}
+.header{
+    background: #f0a52b;
+}
+.search{
+
+    position: relative;
+    min-width: 220px;
+}
+.search button{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: none;
+    border: none;
+    padding: 5px 10px;
+}
+.search input[type="text"]{
+    width: 100%;
+    padding: 5px 0px 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+/* CSS HEADER */
+
 .box_note_right{
 	padding:10px;
 	border:1px solid #000;
@@ -75,64 +128,51 @@ float: left;
 	    margin: 0px 30px 0px 0px;
     float: left;
     max-width: 300px;
-    overflow: hidden;
-    padding: 0px;
-    border: none;
-    background: none;
-    border-radius: 0px;
-
 }
 .list_post_item .thumbnail img{
 	max-width: 100%;
 	height: auto;
 }
+.item_list_hot h2{
+margin:0px 0px 5px 0px;
+}
+ .item_list_hot h2 a{
+    font-size: 15px;
+    line-height: 21px;
+    display: inline-block;
+    font-weight: 700;
+    color: #000;
+}
+.hot_big_post h2 a{
+        color: #000;
+    font-weight: 700;
+    line-height: 35px;
+    font-size: 27px;
+    display: inline-block;
+}
+ .hot_big_post .excerpt p {
+    font-size: 16px;
+    color: #9a9999;
+    line-height: 22px;
+    display: inline-block;
+}
+.hot_big_post_area{
+        margin: 0px 0px 40px 0px;
+}
+.item_list_hot figure{
+    margin:0px 0px 10px 0px;
+}
 .post_wrapper{
 	display: table;
 }
-.footer-widget-area li{
-    width: 100%;
+ .item_list_hot{
+    margin:0px 0px 20px 0px;
 }
-.logo_site{
-	max-width: 80px;
-	float:left;
-}
-.logo_site img{
-	max-width: 100%;
-	height:auto;
-}
-.nav_primary{
-    float: left;
-    margin:8px 0px 0px 10px;	
-}
-.search_header{
-	     float: right;
-    margin: 23px 0px 0px 0px;
-}
-.header{
-	background: #f0a52b;
-}
-.search{
 
-	position: relative;
-    min-width: 220px;
+h2 a:hover , .sidebar [id*="recent-posts"] ul li a:hover, .hot_big_post:hover h2 a , .item_list_hot:hover h2 a , .list_post_item:hover h2 a{
+    color:#f0a52b;
 }
-.search button{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background: none;
-    border: none;
-    padding: 5px 10px;
-}
-.search input[type="text"]{
-    width: 100%;
-    padding: 5px 0px 5px 10px;
-    border-radius: 5px;
-    border: none;
-}
-li.widget{
-	display: block !important;
-}
+
 h2.post_title a{
 	    font-size: 20px;
     color: #000;
@@ -156,6 +196,33 @@ h2.post_title {
     border-bottom: 1px dashed #e6e6e6;
     padding: 25px 0px;
 }
+.g_content{
+    margin:40px 0px 0px 0px;
+}
+.readmore{
+        padding: 7px 25px;
+    background: #2a3b92;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 700;
+    display: table;
+    position: relative;
+}
+.readmore i.fa{
+    transition: all 0.3s linear;
+    position: absolute;
+    right: 14px;
+    top:10px;
+}
+.readmore:hover{
+    color:#fff;
+}
+.readmore:hover i.fa{
+    right: 2px;
+}
+
+
+/* sidebar  */
 .sidebar h3.widget-title{
     font-size: 17px;
     color: #fff;
@@ -218,9 +285,7 @@ h2.post_title {
 	border-top:none;
 	margin:0px 0px 25px 0px;
 }
-.g_content{
-	margin:40px 0px 0px 0px;
-}
+/* sidebar  */
 
 #gallery-1 .gallery-item{
 	     margin: 0px !important;
@@ -264,6 +329,8 @@ font-size: 15px;
     margin: 0px 0px 20px 0px;
 }
 
+
+/* CSS FOOTER */
 .footer{
 	border-top: 2px solid #f0a52b;
     padding: 35px 0px 35px 0px;
@@ -283,4 +350,7 @@ font-size: 15px;
 }
 .footer [class*="address"] , .footer [class*="info"] , .footer  h3.widget-title{
 	margin:0px 0px 20px 0px;
+}
+.footer-widget-area li{
+    width: 100%;
 }
