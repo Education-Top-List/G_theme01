@@ -45,20 +45,14 @@ get_header();
 									<?php  the_content(); ?>
 								</div>
 							</article>
-							<div class="fb-comments" data-href="http://localhost:86/G_theme01" data-numposts="5"></div>
-							<div id="fb-root"></div>
-							<script>(function(d, s, id) {
-								var js, fjs = d.getElementsByTagName(s)[0];
-								if (d.getElementById(id)) return;
-								js = d.createElement(s); js.id = id;
-								js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.1&appId=1953938748210615&autoLogAppEvents=1';
-								fjs.parentNode.insertBefore(js, fjs);
-							}(document, 'script', 'facebook-jssdk'));</script>
+							<?php get_template_part('includes/social/comment_fb'); ?>
+							<?php $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 6, 'post__not_in' => array($post->ID) ) ); ?>
+							<?php if($related){ ?>
 							<div class="related_posts">
 								<h2>Tin cùng chuyên mục</h2>
 								<ul class="row"> 
 									<?php
-									$related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
+									
 									if( $related ) foreach( $related as $post ) {
 										setup_postdata($post); ?>
 
@@ -71,6 +65,7 @@ get_header();
 									wp_reset_postdata(); ?>
 								</ul>   
 							</div>
+						<?php } ?> 
 						</div>
 						<div class="col-md-3 col-sm-3 sidebar">
 							<?php dynamic_sidebar('sidebar1'); ?> 

@@ -383,7 +383,7 @@ img.size-full{
     transform:translate(-50%,-50%);
 }
 .related_posts ul li h4{
-    margin:0px;
+    margin:10px 0px 0px 0px;
 }
 .related_posts ul li h4 a{
          color: #000;
@@ -391,6 +391,12 @@ img.size-full{
     display: inline-block;
     font-size: 14px;
     line-height: 21px;
+}
+.related_posts ul li{
+   margin:0px 0px 30px 0px;
+}
+.related_posts ul li:hover a{
+    color:#f0a52b;
 }
 /* end related posts */
 
@@ -400,6 +406,21 @@ img.size-full{
     max-width: 100%;
 }
 
+ul.list_categories li{
+    display: inline-block;
+    padding:10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+ul.list_categories li.parent_cat{
+      padding: 10px 20px;
+    color: #fff;
+    background: #3a3937;
+}
+ul.list_categories li.parent_cat a{
+    color:#fff;
+    font-size: 15px;
+}
 /* CSS FOOTER */
 .footer{
 	border-top: 2px solid #f0a52b;
