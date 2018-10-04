@@ -20,7 +20,7 @@
 				?>
 			</p>
 		</div>
-
+	
 		
 		<?php if(is_search() OR is_archive()){?>
 			<p><?php echo excerpt(25); ?></p>

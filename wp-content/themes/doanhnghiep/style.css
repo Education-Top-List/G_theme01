@@ -24,6 +24,10 @@ a:hover{
 	max-width: 1160px;
 	margin:0px auto;
 }
+img{
+    max-width: 100%;
+    height: auto;
+}
 .thumbnail{
         overflow: hidden;
     padding: 0px;
@@ -37,7 +41,7 @@ a:hover{
 }
 .nav_primary ul li a{
 display: inline-block;
-    padding: 10px;
+    padding: 10px 13px;
     color: #fff;
     font-weight: 700;
 }
@@ -45,8 +49,9 @@ article.post{
 	clear:both;
 }
 .nav_primary ul li a:hover{
-	color:#fff;
-	background:#974f30;
+    color: #fff;
+    background: #fdcf85;
+    border-radius: 20px;
 }
 #content{
 	clear: both;
@@ -54,8 +59,9 @@ article.post{
 
 /* CSS HEADER */
 .logo_site{
-    max-width: 80px;
+    max-width: 90px;
     float:left;
+    transition: all 0.3s;
 }
 .logo_site img{
     max-width: 100%;
@@ -63,11 +69,27 @@ article.post{
 }
 .nav_primary{
     float: left;
-    margin:19px 0px 0px 10px;    
+    margin:22px 0px 0px 10px;    
 }
 .search_header{
          float: right;
-    margin: 23px 0px 0px 0px;
+    margin: 27px 0px 0px 0px;
+}
+.fixedheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+}
+.fixedheader .logo_site{
+    max-width: 60px;
+}
+.fixedheader .nav_primary {
+    margin:7px 0px 0px 10px;
+}
+.fixedheader .search_header{
+    margin:12px 0px 0px 0px;
 }
 .header{
     background: #f0a52b;
@@ -196,6 +218,9 @@ h2.post_title {
     border-bottom: 1px dashed #e6e6e6;
     padding: 25px 0px;
 }
+li.widget{
+	display: block !important;
+}
 .g_content{
     margin:40px 0px 0px 0px;
 }
@@ -228,7 +253,7 @@ h2.post_title {
     color: #fff;
     padding: 10px 0px;
     text-align: center;
-    background: #f0a52b;
+    background: #143f80;
     margin: 0px 0px 10px 0px;
     text-transform: uppercase;
     font-weight: 700;
@@ -328,7 +353,52 @@ font-size: 15px;
     color: #5a5cb7;
     margin: 0px 0px 20px 0px;
 }
+img.size-full{
+	max-width: 100%;
+}
 
+
+/* related posts */
+.related_posts h2{
+        margin: 0px 0px 20px 0px;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0px 0px 0px 15px;
+    border-left: 4px solid #f0a52b;
+}
+
+.related_posts{
+    margin:30px 0px 20px 0px;
+}
+
+.related_posts ul li .thumbnail {
+    height: 170px;
+    position: relative;
+}
+.related_posts ul li .thumbnail img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+.related_posts ul li h4{
+    margin:0px;
+}
+.related_posts ul li h4 a{
+         color: #000;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+}
+/* end related posts */
+
+.fb_iframe_widget, .fb_iframe_widget>span,  .fb_iframe_widget iframe{
+    width: 100% !important;
+    position: relative !important;
+    max-width: 100%;
+}
 
 /* CSS FOOTER */
 .footer{
@@ -354,3 +424,4 @@ font-size: 15px;
 .footer-widget-area li{
     width: 100%;
 }
+

@@ -4,6 +4,8 @@ function zingvn_resources(){
 	wp_enqueue_style ('bootstrap-style', get_template_directory_uri().'/css/bootstrap.min.css', array(),'1.0');
 	wp_enqueue_style ('style', get_template_directory_uri().'/style.css');
 	wp_enqueue_style ('font-awesome', get_template_directory_uri().'/css/font-awesome.min.css');
+  wp_enqueue_script( 'script', get_template_directory_uri() . '/js/custom.js', array ( 'jquery' ), 1.0, true);
+
 }
 
 add_action('wp_enqueue_scripts','zingvn_resources');
@@ -47,8 +49,9 @@ function excerpt($limit) {
 	// Add featured image support
 function featured_images_setup(){
 	add_theme_support('post-thumbnails');
-	add_image_size('small-thumbnail',180,120,true);
-	add_image_size('banner-image',920,110,true);
+  add_image_size( 'thumbnail',300, 250, true ); //thumbnail
+    add_image_size( 'medium', 600, 400, true ); //medium
+    add_image_size( 'large', 1200, 800, true ); //large
 }
 add_action('after_setup_theme','featured_images_setup');
 
