@@ -49,7 +49,7 @@ get_header();
 									$arg_fpost_query = array(
 										'order' => 'DESC',
 										'cat' => 17,
-										'posts_per_page'=>4,
+										'posts_per_page'=>2,
 										'offset'=>1
 									);
 									$exclude_fpost_query = new WP_Query();
@@ -72,8 +72,37 @@ get_header();
 								</div>
 							</div>
 						</div>
-					</div>
+					</div><!-- hot_big_post_area -->
 
+					<div class="focal_week">
+						<?php 
+						$arg_focal_week = array(
+							'posts_per_page' => 4,
+							'cat' => 20,
+							'orderby' => 'post_date',
+							'order' => 'DESC',
+							'post_type' => 'post',
+							'post_status' => 'publish'
+						);
+						$focal_week_query = new WP_Query();
+						$focal_week_query->query($arg_focal_week);
+						?>
+						<ul>
+							<?php if(have_posts()) : 
+								while($focal_week_query->have_posts()) : $focal_week_query->the_post();
+									?>
+									<li class="item_focal_week">
+										<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a> </figure>
+										<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+									</li>
+
+									<?php  
+								endwhile;
+							else:
+							endif;
+							?>
+						</ul>
+					</div>
 
 					<div class="list_post_content">
 						<?php 
@@ -83,12 +112,8 @@ get_header();
 						);
 						$wp_query = new WP_Query(); $wp_query->query($argsQuery);
 						if(have_posts()): 
-
-
 							while($wp_query->have_posts()) : $wp_query->the_post(); 
-
 								get_template_part('content');		
-
 							endwhile;
 						else:
 						endif;

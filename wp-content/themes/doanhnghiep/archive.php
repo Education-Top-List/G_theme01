@@ -43,7 +43,7 @@ if(have_posts()) :
 							); 
 							echo '<li class="parent_cat">' . get_category_parents( $cat, true, ' &raquo; ' ) .  '</li>' ;
 							$terms = get_terms( 'category', $args );
-
+							$
 							$term_ids = wp_list_pluck( $terms, 'term_id' );
 
 							$categories = get_categories( $args );
@@ -62,9 +62,11 @@ if(have_posts()) :
 					wp_reset_postdata();
 					?>
 				</div>
+				<?php  if(have_posts()) : ?>
 				<div class="col-md-3 col-sm-3 sidebar">
 					<?php dynamic_sidebar('sidebar1'); ?> 
 				</div>
+			<?php endif ?>
 			</div>
 		</div>
 	</div>

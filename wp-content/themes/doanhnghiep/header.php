@@ -4,6 +4,14 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title><?php bloginfo('name'); ?></title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+	<?php $url_site =  get_site_url('null','/wp-content/themes/doanhnghiep', 'http');  ?>
+	<!-- css -->
+	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/slick.css">
+	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/bootstrap.min.css">
+	<!-- js -->
+	<script src="<?php echo BASE_URL; ?>/js/jquery.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class() ?>>

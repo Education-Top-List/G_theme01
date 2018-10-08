@@ -1,17 +1,7 @@
 
 	jQuery(document).ready(function(){
 
-	// jQuery(window).scroll(function () {
-	// 	if (jQuery(this).scrollTop() >80) {
-	// 		jQuery('#back-top').fadeIn();
-	// 		jQuery('.header').addClass('fixedheader');
-	// 	} else {
-	// 		jQuery('#back-top').fadeOut();
-	// 		jQuery('.header').removeClass('fixedheader');
-	// 	}
-	// });
-
-	// SCROLL TO DIV
+				// SCROLL TO DIV
 		jQuery(window).scroll(function(){
 			if(jQuery(this).scrollTop()>500){
 				jQuery('.scrolltop').fadeIn();
@@ -29,31 +19,42 @@
 		      scrollTop: jQuery("header").offset().top
 		    }, 1000);
 		 }); 
-	
-
-		// SHOP POPUP
-			jQuery(" .register_fixed, .fixed_register_mobile, .order_now").click(function(e){
-				jQuery('.popup_register').stop(true,true).fadeIn('300').find('.close_popup').click(function(){jQuery('.popup_register').stop(true,true).fadeOut('300');
-			});
-				jQuery('.popup_register').find('.content_popup').show();
-				e.preventDefault();
-			});
-		jQuery(".btn_region").click(function(e){
-				jQuery('.popup_region').stop(true,true).fadeIn('300').find('.close_popup').click(function(){jQuery('.popup_region').stop(true,true).fadeOut('300');
-			});
-				jQuery('.popup_region').find('.content_popup').show();
-				e.preventDefault();
-			});
-		jQuery(document).click(function(event) {
- 		 //if you click on anything except the modal itself or the "open modal" link, close the modal
-  		if (!jQuery(event.target).closest(".content_popup, .register_fixed, .fixed_register_mobile, .btn_region, .order_now").length) {
-  			jQuery("body").find(".content_popup").hide();
-  				jQuery(".popup").fadeOut(300);
-  			}
-		});
-
-		// EFFECT
-
-
+			// SLIDE
+		jQuery('.focal_week ul').slick({
+			dots: true,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 2000,
+					// fade: true,
+					cssEase: 'linear',
+					responsive: [
+					{
+						breakpoint: 1024,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1,
+							infinite: false,
+							dots: false
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+					]
+				});
 	});
 	

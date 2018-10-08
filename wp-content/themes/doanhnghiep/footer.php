@@ -1,24 +1,35 @@
 <footer class="footer">
 	<div class="container">
-			<div class="row">
+		<div class="row">
 			<?php if(is_active_sidebar('footer1')) :?>
 				<div class="footer-widget-area col-md-4">
 					<?php dynamic_sidebar('footer1'); ?>
 				</div>
 			<?php endif ?>
-				<?php if(is_active_sidebar('footer2')) :?>
+			<?php if(is_active_sidebar('footer2')) :?>
 				<div class="footer-widget-area  col-md-4">
 					<?php dynamic_sidebar('footer2'); ?>
 				</div>
 			<?php endif ?>
-				<?php if(is_active_sidebar('footer3')) :?>
+			<?php if(is_active_sidebar('footer3')) :?>
 				<div class="footer-widget-area  col-md-4">
 					<?php dynamic_sidebar('footer3'); ?>
 				</div>
 			<?php endif ?>
-			</div>
+		</div>
 	</div>
 </footer>
 <?php wp_footer(); ?>
+<script>
+	jQuery(document).ready(function(){
+		console.log('123');
+	});	
+</script>
+
+<script src="<?php echo BASE_URL; ?>/js/wow.min.js"></script>
+<script src="<?php echo BASE_URL; ?>/js/slick.js"></script>
+<script src="<?php echo BASE_URL; ?>/js/custom.js"></script>
+
+
 </body>
 </html>
