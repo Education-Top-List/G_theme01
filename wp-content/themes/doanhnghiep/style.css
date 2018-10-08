@@ -48,6 +48,7 @@ img{
     background: none;
     border-radius: 0px;
     margin:0px;
+    position: relative;
 }
 .nav_primary ul li {
 	float:left;
@@ -57,6 +58,7 @@ display: inline-block;
     padding: 10px 13px;
     color: #fff;
     font-weight: 700;
+    transition: all 0.3s;
 }
 article.post{
 	clear:both;
@@ -69,7 +71,32 @@ article.post{
 #content{
 	clear: both;
 }
-
+.scrolltop {
+    bottom: 20px;
+    position: fixed;
+    right: -40px;
+    transition: all 0.3s;
+    z-index: 500;
+    cursor: pointer;
+    max-width: 40px;
+    left: initial;
+}
+.scrolltop i.fa{
+     width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f0a52b;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+}
+.scrolltop i.fa:hover{
+    background: #293b92;
+}
+.go_scrolltop{
+    right: 20px;
+}
 /* CSS HEADER */
 .logo_site{
     max-width: 90px;
@@ -153,6 +180,36 @@ float: left;
     font-size: 18px;
     color: #36a3e4;
 }
+.pw .thumbnail a::before{
+    content:"";
+    background: rgba(255, 255, 255, 0.25);
+    height: 100%;
+    left: 100%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.pw .thumbnail a::after{
+        content:"";
+     background: rgba(255, 255, 255, 0.25);
+    height: 100%;
+    left: -100%;
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.pw:hover .thumbnail a::before , .pw:hover .thumbnail a::after{
+            left: 0;
+    top: 0;
+}
 .list_post_content .list_post_item:first-child{
 	padding:0px 0px 20px 0px;
 }
@@ -198,15 +255,15 @@ margin:0px 0px 5px 0px;
 .item_list_hot figure{
     margin:0px 0px 10px 0px;
 }
-.post_wrapper{
+.post_wrapper_content{
 	display: table;
 }
  .item_list_hot{
     margin:0px 0px 20px 0px;
 }
 
-h2 a:hover , .sidebar [id*="recent-posts"] ul li a:hover, .hot_big_post:hover h2 a , .item_list_hot:hover h2 a , .list_post_item:hover h2 a{
-    color:#f0a52b;
+.pw:hover h2 a , .widget_area a:hover{
+    color:#f0a52b !important;
 }
 
 h2.post_title a{
@@ -232,11 +289,17 @@ h2.post_title {
     border-bottom: 1px dashed #e6e6e6;
     padding: 25px 0px;
 }
+.list_post_item:last-child{
+    border-bottom: none;
+}
 li.widget{
 	display: block !important;
 }
 .g_content{
     margin:40px 0px 0px 0px;
+}
+.readmore:focus{
+    color:#fff !important;
 }
 .readmore{
         padding: 7px 25px;
@@ -290,6 +353,7 @@ li.widget{
 	width: 100%;
 	height:auto;
 }
+
 .fb-like{
 	display: none !important;
 }
@@ -323,6 +387,9 @@ li.widget{
 	border:1px solid #e6e6e6;
 	border-top:none;
 	margin:0px 0px 25px 0px;
+}
+.sidebar .widget_black_studio_tinymce {
+    border:none;
 }
 /* sidebar  */
 
@@ -371,9 +438,6 @@ img.size-full{
 	max-width: 100%;
 }
 
-
-
-
 .fb_iframe_widget, .fb_iframe_widget>span,  .fb_iframe_widget iframe{
     width: 100% !important;
     position: relative !important;
@@ -391,7 +455,7 @@ ul.list_categories li{
 ul.list_categories li.parent_cat{
       padding: 10px 20px;
     color: #fff;
-    background: #3a3937;
+    background: #143f7f;
 }
 ul.list_categories li.parent_cat a{
     color:#fff;
@@ -413,10 +477,33 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
 }
 
 /* SINGLE POST */
-.content_single_post p img{
+.single-post  .content_single_post .text_content img{
     display: table;
     margin:10px auto;
 }
+.content_single_post .text_content{
+    font-size: 15px;
+    line-height: 22px;
+}
+.content_single_post .text_content h4{
+    line-height: 23px;
+    font-size: 17px;
+}
+.heateor_sss_horizontal_sharing{
+    margin:20px 0px;
+}
+.title_archives{
+    margin:0px;
+    font-size: 20px;
+}
+.title_archives strong{
+    color:#f0a52b;
+}
+.title_archives+ul.list_categories{
+    display: none;
+}
+/* END SINGLE POST */
+
 
 /* related posts */
 .related_posts h2{
@@ -445,6 +532,9 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
 .related_posts ul li h4{
     margin:10px 0px 0px 0px;
 }
+.related_posts ul li:nth-child(3n+1){
+    clear: both;
+}
 .related_posts ul li h4 a{
          color: #000;
     font-weight: 700;
@@ -461,21 +551,6 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
 /* end related posts */
 
 /* END SINGLE POST */
-
-.item_focal_week .thumbnail{
-    max-width: 250px;
-    height: 160px;
-}
-.item_focal_week h2{
-    margin:0px 0px 10px 0px;
-}
-.item_focal_week h2 a{
-        font-size: 16px;
-    line-height: 23px;
-    display: inline-block;
-    font-weight: 700;
-    color: #000;
-}
 
 
 
@@ -526,7 +601,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     left: -40px !important;
 }
 .slick-next {
-    right: 0px !important;
+    right: -12px !important;
 }
 .slick-prev:hover::before, .slick-next:hover::before{
   background: #143f7f  !important;
@@ -561,13 +636,57 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
 .slick-dots li.slick-active button{
     background:#ff9e00 !important;
 }
+
+/* --SLICK SLIDE-- */
+
+/* FOCAL WEEK */
+.focal_week{
+    border-top: 1px solid #e6e6e6;
+    padding: 40px 0px 0px 0px;
+    position: relative;
+}
+.item_focal_week .thumbnail{
+      max-width: 250px;
+    height: 160px;
+    margin: 0px 0px 10px 0px;
+}
+.item_focal_week h2{
+    margin: 0px 0px 10px 0px;
+    max-width: 250px;
+
+}
+.item_focal_week h2 a{
+         font-size: 14px;
+    line-height: 21px;
+    display: inline-block;
+    font-weight: 700;
+    color: #000;
+}
 .focal_week .slick-slider{
    margin: 0px 0px 30px 0px;
     padding: 0px 0px 40px 0px;
     border-bottom: 3px solid red;
 }
-/* --SLICK SLIDE-- */
+.focal_week .lb_focal_week{
+     position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #f0a52b;
+    color: #fff;
+    padding: 6px 13px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 10px;
+}
+/* END FOCAL WEEK */
 
+/* SEARCH PAGE*/
+body.search-results .title_header {
+    font-size: 20px;
+}
+body.search-results .title_header strong{
+    color:#f0a52b;
+}
 
 /* CSS FOOTER */
 .footer{
@@ -580,6 +699,10 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     text-transform: uppercase;
     /* font-weight: 700; */
     margin: 0px 0px 15px 0px;
+}
+.footer-widget-area  iframe{
+        max-width: 100%;
+    height: auto;
 }
 .footer .footer-widget-area .textwidget p{
 	    font-size: 13px;

@@ -29,7 +29,7 @@ get_header();
 								<?php if(have_posts()) : 
 									while($big_post_query->have_posts()) : $big_post_query->the_post();
 										?>
-										<div class="hot_big_post">
+										<div class="hot_big_post pw">
 											<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a> </figure>
 											<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 											<div class="excerpt">
@@ -59,7 +59,7 @@ get_header();
 									if(have_posts()) : 
 										while($exclude_fpost_query->have_posts()) : $exclude_fpost_query->the_post();
 											?>
-											<div class="item_list_hot">
+											<div class="item_list_hot pw">
 												<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a> </figure>
 												<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 											</div>
@@ -75,6 +75,9 @@ get_header();
 					</div><!-- hot_big_post_area -->
 
 					<div class="focal_week">
+						<div class="lb_focal_week">
+							tiêu điểm tuần
+						</div>
 						<?php 
 						$arg_focal_week = array(
 							'posts_per_page' => 4,
@@ -91,7 +94,7 @@ get_header();
 							<?php if(have_posts()) : 
 								while($focal_week_query->have_posts()) : $focal_week_query->the_post();
 									?>
-									<li class="item_focal_week">
+									<li class="item_focal_week pw">
 										<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a> </figure>
 										<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 									</li>

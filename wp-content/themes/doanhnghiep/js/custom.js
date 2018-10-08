@@ -4,19 +4,19 @@
 				// SCROLL TO DIV
 		jQuery(window).scroll(function(){
 			if(jQuery(this).scrollTop()>500){
-				jQuery('.scrolltop').fadeIn();
+				jQuery('.scrolltop').addClass('go_scrolltop');
 			}
 			else if(jQuery(this).scrollTop()>50){
 				jQuery('.header').addClass('fixedheader');
 			}
 			else{
-				jQuery('.scrolltop').fadeOut();
+				jQuery('.scrolltop').removeClass('go_scrolltop');
 				jQuery('.header').removeClass('fixedheader');
 			}
 		});
 		jQuery('.scrolltop').click(function (){
 		    jQuery('html, body').animate({
-		      scrollTop: jQuery("header").offset().top
+		      scrollTop: jQuery("html").offset().top
 		    }, 1000);
 		 }); 
 			// SLIDE

@@ -9,7 +9,7 @@ get_header();
 		<div class="list_post">
 			<?php 
 			if(have_posts()): ?>
-				<h2>Search result for : <?php the_search_query(); ?></h2>
+				<h2 class="title_header">Search result for : <strong><?php the_search_query(); ?></strong></h2>
 				<?php	while(have_posts()): the_post(); 
 					
 				get_template_part('content');

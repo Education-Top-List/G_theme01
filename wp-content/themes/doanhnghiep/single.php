@@ -45,7 +45,10 @@ get_header();
 									<?php  the_content(); ?>
 								</div>
 							</article>
-							<?php get_template_part('includes/social/comment_fb'); ?>
+
+							<!-- fb-comment-area -->
+							<div class="fb-comments" data-href="<?php echo get_permalink();  ?>" data-width="855" data-numposts="20" data-colorscheme="light"></div>
+
 							<?php $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 6, 'post__not_in' => array($post->ID) ) ); ?>
 							<?php if($related){ ?>
 							<div class="related_posts">
@@ -57,8 +60,11 @@ get_header();
 										setup_postdata($post); ?>
 
 										<li class="col-md-4 col-sm-4 col-xs-12">
-											<a href="<?php the_permalink(); ?>"><figure class="thumbnail"><?php the_post_thumbnail(); ?></figure></a>
+											<div class="list_item_related pw">
+											<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></figure>
 											<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
+											</div>
+									
 										</li>
 
 									<?php }

@@ -1,3 +1,7 @@
+
+<div class="scrolltop">
+	<i class="fa fa-angle-up" aria-hidden="true"></i>	
+</div>
 <footer class="footer">
 	<div class="container">
 		<div class="row">
