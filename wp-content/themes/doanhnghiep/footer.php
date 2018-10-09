@@ -24,11 +24,7 @@
 	</div>
 </footer>
 <?php wp_footer(); ?>
-<script>
-	jQuery(document).ready(function(){
-		console.log('123');
-	});	
-</script>
+
 
 <script src="<?php echo BASE_URL; ?>/js/wow.min.js"></script>
 <script src="<?php echo BASE_URL; ?>/js/slick.js"></script>
