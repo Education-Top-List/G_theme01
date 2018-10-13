@@ -13,7 +13,7 @@ get_header();
 				<?php 
 				$arg_big_post_query = array(
 					'posts_per_page' => 1,
-					'cat' => 17,
+					'cat' => 27,
 					'orderby' => 'post_date',
 					'order' => 'DESC',
 					'post_type' => 'post',
@@ -47,7 +47,7 @@ get_header();
 							<?php 
 							$arg_fpost_query = array(
 								'order' => 'DESC',
-								'cat' => 17,
+								'cat' => 27,
 								'posts_per_page'=>2,
 								'offset'=>1
 							);
