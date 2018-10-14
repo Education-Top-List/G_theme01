@@ -13,7 +13,7 @@ get_header();
 				<?php 
 				$arg_big_post_query = array(
 					'posts_per_page' => 1,
-					'cat' => 28,
+					'cat' => 17,
 					'orderby' => 'post_date',
 					'order' => 'DESC',
 					'post_type' => 'post',
@@ -24,30 +24,36 @@ get_header();
 				?>
 				<div class="hot_big_post_area">
 					<div class="row">
-						<div class="col-md-9">
+						<div class="col-md-8">
 							<?php if(have_posts()) : 
-							while($big_post_query->have_posts()) : $big_post_query->the_post();
-								?>
-								<div class="hot_big_post pw">
-									<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a> </figure>
-									<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-									<div class="excerpt">
-										<p><?php echo excerpt(25); ?></p>
-									</div>
-								</div>
+								while($big_post_query->have_posts()) : $big_post_query->the_post();
+									?>
+									<div class="hot_big_post pw">
+										<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a>
+											<?php 
+												$categories = get_the_category(); 
+												if ($categories[0]) {
+														// echo '<pre>';
+														// print_r($categories[0]->name);
+														// echo '</pre>';
 
-								<?php  
-							endwhile;
-						else:
-						endif;
-						?>
-					</div>
-					<div class="col-md-3">
+													// echo $categories[0]->name;
+												}
+											?>
+										<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2> 
+										</figure>
+									</div>
+									<?php  
+								endwhile;
+							endif;
+							?>
+						</div>
+					<div class="col-md-4">
 						<div class="list_hot_post_others">
 							<?php 
 							$arg_fpost_query = array(
 								'order' => 'DESC',
-								'cat' => 28,
+								'cat' => 17,
 								'posts_per_page'=>2,
 								'offset'=>1
 							);
@@ -59,10 +65,10 @@ get_header();
 								while($exclude_fpost_query->have_posts()) : $exclude_fpost_query->the_post();
 									?>
 									<div class="item_list_hot pw">
-										<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a> </figure>
-										<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+										<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a>
+											<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+										</figure>
 									</div>
-
 									<?php  
 								endwhile;
 							else:
@@ -75,12 +81,12 @@ get_header();
 
 			<div class="focal_week">
 				<div class="lb_focal_week">
-					tiêu điểm tuần
+					Tiêu điểm tuần
 				</div>
 				<?php 
 				$arg_focal_week = array(
 					'posts_per_page' => 4,
-					'cat' => 27,
+					'cat' => 20,
 					'orderby' => 'post_date',
 					'order' => 'DESC',
 					'post_type' => 'post',

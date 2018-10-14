@@ -9,33 +9,33 @@ This theme, like WordPress, is licensed under the GPL.
 
 
 ul{
-	padding:0px;
-	margin:0px;
-	list-style:none;
+    padding:0px;
+    margin:0px;
+    list-style:none;
 }
 
 a, a:hover{
-	text-decoration: none !important;
+    text-decoration: none !important;
 }
 a:hover{
-    color:#f0a52b;
+   /*text-decoration: underline !important;*/
 }
 :hover,:focus{
     outline: none !important;
 }
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: Poppins,Roboto,sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     letter-spacing: 0em;
-    color: #000;
+    color: #333;
     position: relative;
     overflow-x: hidden;
 }
 .container{
-	max-width: 1160px;
-	margin:0px auto;
+    max-width: 1160px;
+    margin:0px auto;
 }
 img{
     max-width: 100%;
@@ -51,26 +51,31 @@ img{
     position: relative;
 }
 .nav_primary ul li {
-	float:left;
+    float:left;
 }
 .nav_primary ul li a{
     display: inline-block;
-    padding: 15px 13px;
+    padding: 10px 20px;
     color: #fff;
-    font-weight: 700;
     transition: all 0.3s;
+    font-size: 20px;
+    line-height: 1;
+    font-family: Poppins,Roboto,sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: normal;
 }
 article.post{
-	clear:both;
+    clear:both;
 }
 .nav_primary ul li a:hover{
        color: #fff;
-    background: #8a8989;
+    background: rgba(255,255,255,.15);
     border-radius: 3px;
 
 }
 #content{
-	clear: both;
+    clear: both;
 }
 .scrolltop {
     bottom: 20px;
@@ -86,23 +91,32 @@ article.post{
      width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #f0a52b;
+    background: #000;
     color: #fff;
     text-align: center;
     line-height: 30px;
     font-size: 20px;
 }
 .scrolltop i.fa:hover{
-    background: #293b92;
+    background: rgba(12,12,12,0.8);;
 }
 .go_scrolltop{
     right: 20px;
 }
 /* CSS HEADER */
 .logo_site{
-    max-width: 90px;
+    /*max-width: 90px;*/
     float:left;
     transition: all 0.3s;
+}
+
+.logo_site a{
+    line-height: 1.067;
+    font-weight: 700;
+    letter-spacing: -.05em;
+    color: #000;
+    text-transform: none;
+    font-size: 40px;
 }
 .logo_site img{
     max-width: 100%;
@@ -142,9 +156,9 @@ article.post{
 /* CSS HEADER */
 
 .box_note_right{
-	padding:10px;
-	border:1px solid #000;
-	background:#ccc;
+    padding:10px;
+    border:1px solid #000;
+    background:#ccc;
 }
 span.parent-link{
 float: left;
@@ -154,20 +168,20 @@ float: left;
     padding: 3px 10px 3px 0px;
 }
 .short_nav{
-	    display: table;
+        display: table;
     width: 100%;
 }
 .short_nav ul li{
-	float:left;
-	padding:5px 10px;
-	
+    float:left;
+    padding:5px 10px;
+    
 }
 .short_nav ul li a{
     font-size: 18px;
     color: #36a3e4;
 }
 .pw .thumbnail a::before{
-    content:"";
+    /*content:"";
     background: rgba(255, 255, 255, 0.25);
     height: 100%;
     left: 100%;
@@ -177,10 +191,10 @@ float: left;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
-    transition: all 0.3s;
+    transition: all 0.3s;*/
 }
 .pw .thumbnail a::after{
-        content:"";
+/*        content:"";
      background: rgba(255, 255, 255, 0.25);
     height: 100%;
     left: -100%;
@@ -190,27 +204,27 @@ float: left;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
-    transition: all 0.3s;
+    transition: all 0.3s;*/
 }
 .pw:hover .thumbnail a::before , .pw:hover .thumbnail a::after{
             left: 0;
     top: 0;
 }
 .list_post_content .list_post_item:first-child{
-	padding:0px 0px 20px 0px;
+    padding:0px 0px 20px 0px;
 }
 .list_post_content .list_post_item:last-child{
-	border-bottom: none;
+    border-bottom: none;
 }
 .list_post_item .thumbnail{
-	    margin: 0px 30px 0px 0px;
+        margin: 0px 30px 0px 0px;
     float: left;
     max-width: 300px;
     max-height: 210px;
 }
 .list_post_item .thumbnail img{
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 .item_list_hot h2{
 margin:0px 0px 5px 0px;
@@ -242,31 +256,32 @@ margin:0px 0px 5px 0px;
     margin:0px 0px 10px 0px;
 }
 .post_wrapper_content{
-	display: table;
+    display: table;
 }
  .item_list_hot{
     margin:0px 0px 20px 0px;
 }
 
 .pw:hover h2 a , .widget_area a:hover{
-    color:#f0a52b !important;
+    /*color:#f0a52b !important;*/
 }
 
 h2.post_title a{
-	    font-size: 20px;
-    color: #000;
+        font-size: 20px;
+    color: rgba(12,12,12,0.8);
     line-height: 27px;
     display: inline-block;
     font-weight: 700;
 }
 h2.post_title a:hover{
-	color:#f0a52b;
+    color:#000;
+    /*text-decoration: underline !important;*/
 }
 h2.post_title {
-	margin:0px 0px 10px 0px;
+    margin:0px 0px 10px 0px;
 }
 .excerpt p{
-	font-size: 13px;
+    font-size: 16px;
 }
 .list_post_item{
     clear: both;
@@ -279,7 +294,7 @@ h2.post_title {
     border-bottom: none;
 }
 li.widget{
-	display: block !important;
+    display: block !important;
 }
 .g_content{
     margin:40px 0px 0px 0px;
@@ -289,7 +304,7 @@ li.widget{
 }
 .readmore{
         padding: 7px 25px;
-    background: #2a3b92;
+    background: rgba(12,12,12,0.8);
     border-radius: 3px;
     color: #fff;
     font-weight: 700;
@@ -316,32 +331,32 @@ li.widget{
     color: #fff;
     padding: 10px 0px;
     text-align: center;
-    background: #143f80;
+    background: #000;
     margin: 0px 0px 10px 0px;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 25px;
 }
 .sidebar table{
-	width: 100%;
+    width: 100%;
 }
 .sidebar table tr, .sidebar table td , .sidebar table th{
-	border:1px solid #000;
-	text-align: center;
+    border:1px solid #000;
+    text-align: center;
 }
 .sidebar table td , .sidebar table th{
-	padding:5px 0px;
+    padding:5px 0px;
 }
 .sidebar iframe{
-	max-width: 100% !important
+    max-width: 100% !important
 }
 .sidebar img{
-	width: 100%;
-	height:auto;
+    width: 100%;
+    height:auto;
 }
 
 .fb-like{
-	display: none !important;
+    display: none !important;
 }
 .sidebar [id*="recent-posts"] ul li{
     padding: 0px 0px 10px 15px;
@@ -350,29 +365,29 @@ li.widget{
     border-bottom: 1px dashed #e6e6e6;
 }
 .sidebar [id*="recent-posts"] ul li a{
-	color:#000;
+    color:#000;
 }
 .sidebar [id*="recent-posts"] ul{
-	padding:0px 10px;
+    padding:0px 10px;
 }
 .sidebar [id*="recent-posts"] ul li:last-child{
-	border-bottom: none;
-	padding:0px 0px 0px 15px;
+    border-bottom: none;
+    padding:0px 0px 0px 15px;
 }
 .sidebar [id*="recent-posts"] ul li::before{
-	position: absolute;
-	left: 0px;
-	content:"";
-	width: 5px;
-	top:10px;
-	height: 5px;
-	border-radius: 50%;
-	background:#f0a52b;
+    position: absolute;
+    left: 0px;
+    content:"";
+    width: 5px;
+    top:10px;
+    height: 5px;
+    border-radius: 50%;
+    background:#f0a52b;
 }
 .sidebar .widget_area{
-	border:1px solid #e6e6e6;
-	border-top:none;
-	margin:0px 0px 25px 0px;
+    border:1px solid #e6e6e6;
+    border-top:none;
+    margin:0px 0px 25px 0px;
 }
 .sidebar .widget_black_studio_tinymce {
     border:none;
@@ -380,30 +395,30 @@ li.widget{
 /* sidebar  */
 
 #gallery-1 .gallery-item{
-	     margin: 0px !important;
+         margin: 0px !important;
     padding: 3px;
 }
 #gallery-1 img{
-	 border: none;
+     border: none;
     max-width: 110px;
     height: auto;
 
 }
 .breadcrumb li{
-	display: inline;
+    display: inline;
 }
 
 .breadcrumb ul li::after{
-	    content: "\f105";
+        content: "\f105";
     margin: 0px 3px;
     font:normal normal normal 14px/1 FontAwesome;
 }
 .breadcrumb ul li:last-child::after{
-	content:"";
+    content:"";
 }
 
 .breadcrumb ul li a {
-	      font-size: 15px;
+          font-size: 15px;
     line-height: 22px;
     font-weight: 700;
 }
@@ -414,14 +429,14 @@ font-size: 15px;
 }
 
 .single_post_info h2{
-	    font-size: 25px;
+        font-size: 25px;
     line-height: 32px;
     display: block;
     color: #5a5cb7;
     margin: 0px 0px 20px 0px;
 }
 img.size-full{
-	max-width: 100%;
+    max-width: 100%;
 }
 
 .fb_iframe_widget, .fb_iframe_widget>span,  .fb_iframe_widget iframe{
@@ -430,7 +445,7 @@ img.size-full{
     max-width: 100%;
 }
 ul.list_categories{
-    border-bottom: 1px solid #f0a52b;
+    border-bottom: 1px solid #000;
 }
 ul.list_categories li{
     display: inline-block;
@@ -439,9 +454,9 @@ ul.list_categories li{
     font-weight: 700;
 }
 ul.list_categories li.parent_cat{
-      padding: 10px 20px;
+    padding: 10px 20px;
     color: #fff;
-    background: #143f7f;
+    background: #000;
 }
 ul.list_categories li.parent_cat a{
     color:#fff;
@@ -561,7 +576,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     content: "\f104" !important;
     font: normal normal normal 14px/1 FontAwesome !important;
     font-size: 28px !important;
-    background: #f0a52b;
+    background: #000;
     width: 35px;
     height: 35px;
     display: inline-block;
@@ -574,7 +589,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
  content: "\f105" !important;
     font: normal normal normal 14px/1 FontAwesome !important;
     font-size: 28px !important;
-    background: #f0a52b;
+    background: #000;
     width: 35px;
     height: 35px;
     display: inline-block;
@@ -582,6 +597,8 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     color: #fff !important;
     padding: 0px 0px;
     border-radius: 20px;
+    position: absolute;
+    right: -30px;
 }
 .slick-prev {
     left: -40px !important;
@@ -590,7 +607,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     right: -12px !important;
 }
 .slick-prev:hover::before, .slick-next:hover::before{
-  background: #143f7f  !important;
+  background: rgba(12,12,12,0.8)  !important;
   color: #fff !important;
 }
 .slick-prev, .slick-next{
@@ -620,7 +637,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
         background: #ccc;
 }
 .slick-dots li.slick-active button{
-    background:#ff9e00 !important;
+    background:#000 !important;
 }
 
 /* --SLICK SLIDE-- */
@@ -649,20 +666,25 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     color: #000;
 }
 .focal_week .slick-slider{
-   margin: 0px 0px 30px 0px;
-    padding: 0px 0px 40px 0px;
-    border-bottom: 3px solid red;
+   margin: 15px 0px 30px 0px;
+    padding: 0px 0px 40px 50px;
+    border-bottom: 3px solid rgba(12,12,12,0.8);
 }
 .focal_week .lb_focal_week{
-     position: absolute;
+    position: absolute;
     top: 0px;
     left: 0px;
-    background: #f0a52b;
+    background: #000;
     color: #fff;
-    padding: 6px 13px;
-    text-transform: uppercase;
+    padding: 10px 25px;
     font-weight: 800;
-    font-size: 10px;
+    padding-bottom: 8px;
+    font-size: 17px;
+    text-align: center;
+    background: #000;
+    margin: 0px 0px 10px 0px;
+    text-transform: uppercase;
+    line-height: 25px;
 }
 /* END FOCAL WEEK */
 
@@ -741,10 +763,11 @@ body.search-results .title_header strong{
 
 /* CSS FOOTER */
 .footer{
-	border-top: 2px solid #f0a52b;
+    border-top: 2px solid #333;
     padding: 35px 0px 35px 0px;
-    margin:40px 0px 0px 0px;
+    margin: 40px 0px 0px 0px;
 }
+
 .footer .footer-widget-area .textwidget h2 , .footer  h3.widget-title{
    font-size: 18px;
     text-transform: uppercase;
@@ -756,13 +779,13 @@ body.search-results .title_header strong{
     height: auto;
 }
 .footer .footer-widget-area .textwidget p{
-	    font-size: 13px;
+        font-size: 13px;
     color: #9c9292;
     line-height: 22px;
     margin: 0px;
 }
 .footer [class*="address"] , .footer [class*="info"] , .footer  h3.widget-title{
-	margin:0px 0px 20px 0px;
+    margin:0px 0px 20px 0px;
 }
 .footer-widget-area li{
     width: 100%;

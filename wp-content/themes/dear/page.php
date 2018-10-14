@@ -42,7 +42,6 @@ if(have_posts()) :
 									if($categories){
 										foreach ($categories as $category){
 											$output .= '<a href="' . get_category_link($category->term_id) . '"> '. $category-> cat_name . ' </a>' .  $seperator;
-
 										}
 										echo trim($output , $seperator);
 									}
@@ -60,11 +59,6 @@ if(have_posts()) :
 								?>	
 							</div>
 						</div>
-
-
-				
-
-
 				<?php endwhile;
 			else:
 			endif;
