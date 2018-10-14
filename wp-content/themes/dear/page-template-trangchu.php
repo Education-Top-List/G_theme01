@@ -144,7 +144,7 @@ get_header();
 
 </div>
 </div>
-<?php page_nav(); ?>
+<!-- <?php page_nav(); ?> -->
 	
 </div>
 
