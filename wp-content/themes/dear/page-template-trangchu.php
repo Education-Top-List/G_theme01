@@ -13,7 +13,6 @@ get_header();
 				<?php 
 				$arg_big_post_query = array(
 					'posts_per_page' => 1,
-					'cat' => 28,
 					'orderby' => 'post_date',
 					'order' => 'DESC',
 					'post_type' => 'post',
@@ -36,7 +35,6 @@ get_header();
 														// echo '<pre>';
 														// print_r($categories[0]->name);
 														// echo '</pre>';
-
 													// echo $categories[0]->name;
 												}
 											?>
@@ -53,7 +51,6 @@ get_header();
 							<?php 
 							$arg_fpost_query = array(
 								'order' => 'DESC',
-								'cat' => 28,
 								'posts_per_page'=>2,
 								'offset'=>1
 							);
@@ -121,7 +118,9 @@ get_header();
 			<?php 
 			$argsQuery = array(
 				'posts_per_page'   => 10,
-				'category__not_in' => 17
+				'meta_key' => 'wpb_post_views_count',
+				'orderby' => 'meta_value_num',
+				'order' => 'DESC'
 			);
 			$wp_query = new WP_Query(); $wp_query->query($argsQuery);
 			if(have_posts()): 
