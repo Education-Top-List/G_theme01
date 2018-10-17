@@ -22,59 +22,111 @@ get_header();
 				$big_post_query->query($arg_big_post_query);
 				?>
 				<div class="hot_big_post_area">
-					<div class="row">
-						<div class="col-md-8">
-							<?php if(have_posts()) : 
-								while($big_post_query->have_posts()) : $big_post_query->the_post();
-									?>
-									<div class="hot_big_post pw">
-										<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a>
-											<?php 
-												$categories = get_the_category(); 
-												if ($categories[0]) {
-														// echo '<pre>';
-														// print_r($categories[0]->name);
-														// echo '</pre>';
-													// echo $categories[0]->name;
-												}
+					<div class="row featured-news-wrap">
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col-md-12 col-sm-12">
+									<div class="row">
+										<div class="box h-400">
+											<?php if(have_posts()) : 
+												while($big_post_query->have_posts()) : $big_post_query->the_post();
 											?>
-										<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2> 
-										</figure>
+											<!-- <figure class="thumbnail"> -->
+													<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?>
+														<div class="over-lay"></div>
+													</a>
+														
+														<div class="info">
+															<h2><a href="<?php the_permalink();?>">
+																<?php the_title(); ?></a></h2>
+														</div>
+											<!-- </figure> -->
+											<?php  
+												endwhile;
+											endif;	
+											?>
+										</div>
 									</div>
-									<?php  
-								endwhile;
-							endif;
-							?>
+								</div>
+								<div class="col-md-12 col-sm-12">
+									<div class="row">
+										<?php 
+											$arg_fpost_query = array(
+												'order' => 'DESC',
+												'posts_per_page'=>2,
+												'offset'=>1,
+												'post_type' => 'post',
+												'post_status' => 'publish'
+											);
+											$exclude_fpost_query = new WP_Query();
+											$exclude_fpost_query->query($arg_fpost_query);
+										?>
+										<?php if(have_posts()) : 
+											while($exclude_fpost_query->have_posts()) : $exclude_fpost_query->the_post();
+										?>
+										<div class="col-md-6 col-sm-6">
+											<div class="row">
+												<div class="box h-200">
+												<!-- <figure class="thumbnail"> -->
+													<a href="<?php the_permalink(); ?>">
+													  <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']);?>
+													</a>
+													<div class="over-lay"></div>
+													<div class="info">
+														<h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+													</div>
+												</div>
+											<!-- </figure> -->
+											</div>
+										</div>
+										<?php  
+											endwhile;
+										endif;	
+										?>
+									</div>
+								</div>
+								
+							</div>
 						</div>
-					<div class="col-md-4">
-						<div class="list_hot_post_others">
-							<?php 
-							$arg_fpost_query = array(
-								'order' => 'DESC',
-								'posts_per_page'=>2,
-								'offset'=>1
-							);
-							$exclude_fpost_query = new WP_Query();
-							$exclude_fpost_query->query($arg_fpost_query);
-							?>
-							<?php 
-							if(have_posts()) : 
-								while($exclude_fpost_query->have_posts()) : $exclude_fpost_query->the_post();
+						<div class="col-md-6">
+							<div class="row">
+								<?php 
+										$arg_fpost_query = array(
+											'order' => 'DESC',
+											'posts_per_page'=>6,
+											'offset'=>3,
+											'post_type' => 'post',
+											'post_status' => 'publish'
+										);
+										$exclude_fpost_query = new WP_Query();
+										$exclude_fpost_query->query($arg_fpost_query);
 									?>
-									<div class="item_list_hot pw">
-										<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a>
-											<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-										</figure>
-									</div>
+									<?php if(have_posts()) : 
+										while($exclude_fpost_query->have_posts()) : $exclude_fpost_query->the_post();
+									?>
+									<div class="col-md-6 col-sm-6">
+											<div class="row">
+												<div class="box h-200">
+												<!-- <figure class="thumbnail"> -->
+													<a href="<?php the_permalink(); ?>">
+													  <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']);?>
+													</a>
+													<div class="over-lay"></div>
+													<div class="info">
+														<h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+													</div>
+												</div>
+											<!-- </figure> -->
+											</div>
+										</div>
 									<?php  
-								endwhile;
-							else:
-							endif;
-							?>
+										endwhile;
+									endif;	
+									?>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div><!-- hot_big_post_area -->
+				</div><!-- hot_big_post_area -->
 
 			<div class="focal_week">
 				<div class="lb_focal_week">
@@ -83,7 +135,7 @@ get_header();
 				<?php 
 				$arg_focal_week = array(
 					'posts_per_page' => 4,
-					'cat' => 27,
+					// 'cat' => 27,
 					'orderby' => 'post_date',
 					'order' => 'DESC',
 					'post_type' => 'post',
