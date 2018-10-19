@@ -318,6 +318,47 @@ function wpb_get_post_views($postID){
     }
     return $count.' Views';
 }
+
+//button like
+add_filter( 'the_content', 'post_love_display', 99 );
+function post_love_display( $postID ) {
+  
+  $love_text = '';
+  $count_love_key = 'wpb_post_love_count';
+  $count = get_post_meta($postID, $count_love_key, true);
+  if($count==''){
+    delete_post_meta($postID, $count_love_key);
+    add_post_meta($postID, $count_love_key, '1');
+  }
+  $love_text = '<p class="love-received"><a class="love-button" href="javascript:void(0)" data-id="' . get_the_ID() . '">give love</a><span id="love-count">' . $count . '</span></p>'; 
+
+  return $love_text;
+
+}
+
+add_action( 'wp_ajax_nopriv_post_love_add_love', 'post_love_add_love' );
+add_action( 'wp_ajax_post_love_add_love', 'post_love_add_love' );
+
+function post_love_add_love() {
+    $count_love_key = 'wpb_post_love_count';
+    $love = get_post_meta($_POST['post_id'], $count_love_key, true );
+    if($love){
+      $love++;
+      update_post_meta($_POST['post_id'], $count_love_key, $love);
+    }
+}
+
+add_action( 'wp_enqueue_scripts', 'ajax_test_enqueue_scripts' );
+function ajax_test_enqueue_scripts() {
+  wp_enqueue_script( 'love', plugins_url( '/love.js', __FILE__ ), array('jquery'), '1.0', true );
+
+  wp_localize_script( 'love', 'postlove', array(
+    'ajax_url' => admin_url( 'admin-ajax.php' )
+  ));
+
+}
+
+
 //To keep the count accurate, lets get rid of prefetching
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
  
