@@ -330,9 +330,7 @@ function post_love_display( $postID ) {
     delete_post_meta($postID, $count_love_key);
     add_post_meta($postID, $count_love_key, '1');
   }
-  $love_text = '<p class="love-received"><a class="love-button" href="javascript:void(0)" data-id="' . get_the_ID() . '">give love</a><span id="love-count">' . $count . '</span></p>'; 
-
-  return $love_text;
+  return $count;
 
 }
 
@@ -345,7 +343,9 @@ function post_love_add_love() {
     if($love){
       $love++;
       update_post_meta($_POST['post_id'], $count_love_key, $love);
+      echo $love;
     }
+    die();
 }
 
 add_action( 'wp_enqueue_scripts', 'ajax_test_enqueue_scripts' );

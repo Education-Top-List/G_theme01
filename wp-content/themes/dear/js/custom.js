@@ -64,8 +64,9 @@ jQuery(document).ready(function(){
 			]
 	});
 
-	$('.love-button').click(function(){
+	$('.like__btn').click(function(){
     	var post_id = jQuery(this).data('id');
+    	var post_count = jQuery(this).data('count');
 		jQuery.ajax({
 			url : postlove.ajax_url,
 			type : 'post',
@@ -74,7 +75,8 @@ jQuery(document).ready(function(){
 				post_id : post_id
 			},
 			success : function( response ) {
-				location.reload();
+				jQuery('.like__btn.id_'+post_id).prop("disabled", true);
+				jQuery('.like__number_'+post_id).html( response );
 			}
 		});
     })

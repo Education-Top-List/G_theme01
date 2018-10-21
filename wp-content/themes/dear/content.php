@@ -17,11 +17,11 @@
 		}; ?>
 	</figure>
 	<div class="post_wrapper_content">
-		<!-- <button class="like__btn animated">
+		<button class="like__btn animated id_<?= get_the_ID() ?>" data-id="<?= get_the_ID() ?>">
     		<i class="like__icon fa fa-heart"></i>
-    		<span class="like__number">99</span>
-  		</button> -->
-  		<?php echo post_love_display(get_the_ID()) ?>
+    		<span class="like__number_<?= get_the_ID() ?>"> <?php echo post_love_display(get_the_ID()) ?> </span>
+  		</button>
+  		
 		<h2 class="post_title"><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>
 		<?php if(is_category()) : ?>
 		<div class="post_meta">
