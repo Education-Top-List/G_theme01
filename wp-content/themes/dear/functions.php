@@ -320,9 +320,7 @@ function wpb_get_post_views($postID){
 }
 
 //button like
-add_filter( 'the_content', 'post_love_display', 99 );
 function post_love_display( $postID ) {
-  
   $love_text = '';
   $count_love_key = 'wpb_post_love_count';
   $count = get_post_meta($postID, $count_love_key, true);
@@ -331,12 +329,9 @@ function post_love_display( $postID ) {
     add_post_meta($postID, $count_love_key, '1');
   }
   return $count;
-
 }
 
-add_action( 'wp_ajax_nopriv_post_love_add_love', 'post_love_add_love' );
 add_action( 'wp_ajax_post_love_add_love', 'post_love_add_love' );
-
 function post_love_add_love() {
     $count_love_key = 'wpb_post_love_count';
     $love = get_post_meta($_POST['post_id'], $count_love_key, true );
@@ -350,7 +345,7 @@ function post_love_add_love() {
 
 add_action( 'wp_enqueue_scripts', 'ajax_test_enqueue_scripts' );
 function ajax_test_enqueue_scripts() {
-  wp_enqueue_script( 'love', plugins_url( '/love.js', __FILE__ ), array('jquery'), '1.0', true );
+  wp_enqueue_script( 'love', '1.0', true );
 
   wp_localize_script( 'love', 'postlove', array(
     'ajax_url' => admin_url( 'admin-ajax.php' )
