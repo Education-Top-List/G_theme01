@@ -31,7 +31,6 @@ get_header();
 											<?php if(have_posts()) : 
 												while($big_post_query->have_posts()) : $big_post_query->the_post();
 											?>
-											<!-- <figure class="thumbnail"> -->
 													<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?>
 														<div class="over-lay"></div>
 													</a>
@@ -40,7 +39,6 @@ get_header();
 															<h2><a href="<?php the_permalink();?>">
 																<?php the_title(); ?></a></h2>
 														</div>
-											<!-- </figure> -->
 											<?php  
 												endwhile;
 											endif;	
@@ -67,16 +65,15 @@ get_header();
 										<div class="col-md-6 col-sm-6">
 											<div class="row">
 												<div class="box h-200">
-												<!-- <figure class="thumbnail"> -->
 													<a href="<?php the_permalink(); ?>">
 													  <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']);?>
+													  <div class="over-lay"></div>
 													</a>
-													<div class="over-lay"></div>
+													
 													<div class="info">
 														<h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 													</div>
 												</div>
-											<!-- </figure> -->
 											</div>
 										</div>
 										<?php  
@@ -107,16 +104,15 @@ get_header();
 									<div class="col-md-6 col-sm-6">
 											<div class="row">
 												<div class="box h-200">
-												<!-- <figure class="thumbnail"> -->
 													<a href="<?php the_permalink(); ?>">
 													  <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']);?>
+													  <div class="over-lay"></div>
 													</a>
-													<div class="over-lay"></div>
+													
 													<div class="info">
 														<h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 													</div>
 												</div>
-											<!-- </figure> -->
 											</div>
 										</div>
 									<?php  
@@ -126,7 +122,8 @@ get_header();
 							</div>
 						</div>
 					</div>
-				</div><!-- hot_big_post_area -->
+				</div>
+				<!-- hot_big_post_area -->
 
 			<div class="focal_week">
 				<div class="lb_focal_week">
@@ -135,7 +132,6 @@ get_header();
 				<?php 
 				$arg_focal_week = array(
 					'posts_per_page' => 4,
-					// 'cat' => 27,
 					'orderby' => 'post_date',
 					'order' => 'DESC',
 					'post_type' => 'post',
@@ -170,7 +166,7 @@ get_header();
 			<?php 
 			$argsQuery = array(
 				'posts_per_page'   => 10,
-				'meta_key' => 'wpb_post_views_count',
+				'meta_key' => 'wpb_post_love_count',
 				'orderby' => 'meta_value_num',
 				'order' => 'DESC'
 			);
