@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title><?php bloginfo('name'); ?></title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"> -->
 	<?php $url_site =  get_site_url('null','/wp-content/themes/dear', 'http');  ?>
 	<!-- css -->
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/slick.css">
