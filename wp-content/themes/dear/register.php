@@ -73,7 +73,7 @@ if ($user_ID)
    
             $success = 1;  
    
-            //header( 'Location:' . get_bloginfo('url') . '/login/?success=1&u=' . $username );  
+            header( 'Location:' . admin_url() );  
    
         }  
    
@@ -187,10 +187,10 @@ a {
                         <input type="text" placeholder="Enter Email" name="email" required>
 
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <input type="password" placeholder="Enter Password" name="password" required>
 
                         <label for="psw-repeat"><b>Repeat Password</b></label>
-                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                        <input type="password" placeholder="Repeat Password" name="password_confirmation" required>
 
                         <input name="terms" id="terms" type="checkbox" checked value="Yes">  
                         <label for="terms">I agree to the Terms of Service</label>  
@@ -199,7 +199,8 @@ a {
                         <button type="submit" class="registerbtn">Register</button>
 
                         <div class="container">
-                            <p>Already have an account? <a href="#">Sign in</a>.</p>
+                            <p>Already have an account? <a href="<?php echo wp_login_url(); ?>">Sign in</a></p>
+                            <p><a href="<?php echo home_url(); ?>">Quay lại Yangradio.com</a></p>
                         </div>
                     </form>
                 </div>
