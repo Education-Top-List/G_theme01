@@ -75,6 +75,7 @@ jQuery(document).ready(function(){
 				post_id : post_id
 			},
 			success : function( response ) {
+				jQuery('.vote').css("display","inherit");
 				jQuery('.like__btn.id_'+post_id).prop("disabled", true);
 				jQuery('.like__number_'+post_id).html( response );
 			}

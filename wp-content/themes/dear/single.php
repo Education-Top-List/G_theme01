@@ -18,8 +18,7 @@ get_header();
 							<article class="content_single_post">
 								<div class="single_post_info">
 									<h2><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>
-									<p><?php the_time('d/m/y');?> | Số lượt xem : <span> <?php echo wpb_get_post_views(get_the_ID()); ?></span> 
-									</p>
+									
 								</div>
 								<div class="post_avt">
 									<div class="wrap_post_avt">
@@ -27,9 +26,34 @@ get_header();
 								</div>
 								<div class="text_content">
 									<?php  the_content(); ?>
-									<span class="auth">
-										<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php the_author(); ?></a>
-									</span> 
+									<div class="time-single">
+										<span>Hà Nội, <?php the_time('d/m/y');?></span>
+									</div>
+									<div class="clearfix"></div>
+									<div class="author-custom">
+										<div class="col-md-3 col-sm-3">
+											<div class="row auth-single">
+												<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
+													<?php echo get_avatar(get_the_author_meta('ID')); ?>
+													<strong><?php the_author(); ?></strong>
+												</a> 
+											</div>
+										</div>
+										<div class="col-md-9 col-sm-9">
+											<div class="row social-single">
+											 	<span class="view">
+											 	<i class="fa fa-eye" aria-hidden="true"></i> 
+											 		<?php echo wpb_get_post_views(get_the_ID()); ?> Người đang xem
+											 	</span> 
+												<button class="like__btn animated id_<?= get_the_ID() ?>" data-id="<?= get_the_ID() ?>">
+										    		<i class="like__icon fa fa-heart"></i>
+										    		<span class="like__number_<?= get_the_ID() ?>"> Click để bình chọn </span>
+										    		<div class="vote" style="display: none">Người đã bình chọn</div>
+										  		</button>
+										  			
+											</div>
+										</div>
+							  		</div>
 								</div>
 							</article>
 							<!-- fb-comment-area -->

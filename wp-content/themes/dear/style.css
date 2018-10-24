@@ -920,3 +920,36 @@ body.search-results .title_header strong{
 .author-custom strong:hover {
     color: rgba(231,76,60, 0.8);
 }
+
+/*author for single*/
+.auth-single {
+    text-align: center;
+    margin: 0;
+    margin-left: -50%;
+}
+
+.view {
+    border: none;
+    background-color: #337ab7;
+    color: white;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    max-width: 200px;
+    transition: all ease 0.3s;
+    align-items: center;
+}
+
+.auth-single strong {
+    margin-left: 0px;
+}
+
+.social-single .like__btn {
+    float:none;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+.time-single {
+    float: right;
+}
