@@ -187,10 +187,10 @@ a {
                         <input type="text" placeholder="Enter Email" name="email" required>
 
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <input type="password" placeholder="Enter Password" name="password" required>
 
                         <label for="psw-repeat"><b>Repeat Password</b></label>
-                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                        <input type="password" placeholder="Repeat Password" name="password_confirmation" required>
 
                         <input name="terms" id="terms" type="checkbox" checked value="Yes">  
                         <label for="terms">I agree to the Terms of Service</label>  
