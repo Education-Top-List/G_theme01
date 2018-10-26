@@ -167,16 +167,16 @@ a {
                     } ?></span>
 
                     <label for="username"><b>Username</b></label>  
-                    <input type="text" name="username" id="username" placeholder="Tên Đăng Nhập">  
+                    <input type="text" name="username" id="username" placeholder="Tên Đăng Nhập" autocomplete="off">  
 
                     <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Email" name="email" required>
+                    <input type="text" placeholder="Email" name="email" required autocomplete="off">
 
                     <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Password" name="password" required>
+                    <input type="password" placeholder="Password" name="password" required autocomplete="off">
 
                     <label for="psw-repeat"><b>Repeat Password</b></label>
-                    <input type="password" placeholder="Confirm Password" name="password_confirmation" required>
+                    <input type="password" placeholder="Confirm Password" name="password_confirmation" required autocomplete="off">
 
                     <input name="terms" id="terms" type="checkbox" checked value="Yes">  
                     <label for="terms">I agree to the Terms of Service</label>  
