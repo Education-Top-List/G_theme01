@@ -73,7 +73,7 @@ if ($user_ID)
    
             $success = 1;  
    
-            //header( 'Location:' . get_bloginfo('url') . '/login/?success=1&u=' . $username );  
+            header( 'Location:' . admin_url() );  
    
         }  
    
@@ -199,7 +199,8 @@ a {
                         <button type="submit" class="registerbtn">Register</button>
 
                         <div class="container">
-                            <p>Already have an account? <a href="#">Sign in</a>.</p>
+                            <p>Already have an account? <a href="<?php echo wp_login_url(); ?>">Sign in</a>.</p>
+                            <p><a href="<?php echo home_url(); ?>">← Quay lại</a></p>
                         </div>
                     </form>
                 </div>
