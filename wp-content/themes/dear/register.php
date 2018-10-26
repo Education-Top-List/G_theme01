@@ -89,6 +89,10 @@ if ($user_ID)
 <style>
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background: url('/wp-content/themes/dear/images/bg_register.jpg') fixed;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
 }
 
 * {
@@ -96,19 +100,14 @@ body {
 }
 
 /* Add padding to containers */
-.container {
-    padding: 16px;
-    background-color: white;
-}
 
-.container .register {
+.register {
     position: absolute;
-    top: 0px;
-    width: 88%;
-    padding: 18px 6% 60px 6%;
-    margin: 0 0 35px 0;
-    background: rgb(247, 247, 247);
+    top: 35%;
+    padding: 0px 6% 20px 6%;
+    background: rgb(225, 222, 222);
     border: 1px solid rgba(147, 184, 189,0.8);
+    border-radius: 20px;
 }
 
 
@@ -116,7 +115,7 @@ body {
     right: 0px;
     min-height: 560px;
     margin: 0px auto;
-    width: 600px;
+    width: 500px;
     position: relative;
 }
 
@@ -124,21 +123,10 @@ body {
 input[type=text], input[type=password] {
     width: 100%;
     padding: 15px;
-    margin: 5px 0 22px 0;
+    margin: 2px 0 10px 0;
     display: inline-block;
     border: none;
     background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-}
-
-/* Overwrite default styles of hr */
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
 }
 
 /* Set a style for the submit button */
@@ -167,43 +155,37 @@ a {
 </head>
     <body>
         <div class="wrap">
-            <div class="container">
-                <div class="register">
-                    <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
-                        <h1>Register</h1>
-                        <p>Please fill in this form to create an account.</p>
-                        <hr>
-                        <span><?php if (count($errors) > 0) {
-                            foreach ($errors as $e) {
-                              echo $e;
-                              echo "<br>";
-                            }
-                        } ?></span>
+            <div class="register">
+                <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
+                    <h1>Sign Up</h1>
+                    <hr>
+                    <span><?php if (count($errors) > 0) {
+                        foreach ($errors as $e) {
+                          echo $e;
+                          echo "<br>";
+                        }
+                    } ?></span>
 
-                        <label for="username"><b>Username</b></label>  
-                        <input type="text" name="username" id="username" placeholder="Con thú omi">  
+                    <label for="username"><b>Username</b></label>  
+                    <input type="text" name="username" id="username" placeholder="Tên Đăng Nhập">  
 
-                        <label for="email"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Email" name="email" required>
 
-                        <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="password" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Password" name="password" required>
 
-                        <label for="psw-repeat"><b>Repeat Password</b></label>
-                        <input type="password" placeholder="Repeat Password" name="password_confirmation" required>
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Confirm Password" name="password_confirmation" required>
 
-                        <input name="terms" id="terms" type="checkbox" checked value="Yes">  
-                        <label for="terms">I agree to the Terms of Service</label>  
-
-                        <hr>
-                        <button type="submit" class="registerbtn">Register</button>
-
-                        <div class="container">
-                            <p>Already have an account? <a href="<?php echo wp_login_url(); ?>">Sign in</a>.</p>
-                            <p><a href="<?php echo home_url(); ?>">← Quay lại</a></p>
-                        </div>
-                    </form>
-                </div>
+                    <input name="terms" id="terms" type="checkbox" checked value="Yes">  
+                    <label for="terms">I agree to the Terms of Service</label>  
+                    <button type="submit" class="registerbtn">Register</button>
+                    <hr>
+                    <div class="container">
+                        </a>Already have an account? <a href="<?php echo wp_login_url(); ?>">Sign in</a>.
+                    </div>
+                </form>
             </div>
         </div>
     </body>
