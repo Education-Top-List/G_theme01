@@ -953,3 +953,6 @@ body.search-results .title_header strong{
 .time-single {
     float: right;
 }
+
+.admin_action a{padding:7px 24px;border-radius:3px;color:#000;font-weight:700;display:table;border:solid 1px;position:relative;margin-top:24px;transition:all 0.5s;}
+.admin_action a:hover{background:rgba(231,76,60, 1);color:#fff;}

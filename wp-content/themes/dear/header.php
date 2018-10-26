@@ -30,24 +30,46 @@
 		<div class="wrap_inner_header">
 			<div class="container">
 				<div class="top_header">
-						<div class="logo_site">
-					<?php 
-					if(has_custom_logo()){
-						the_custom_logo();
-					}
-					else { ?> 
-						<h2><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h2>
-					<?php } ?>
-				</div>
-				<div class="search_header">
-					<?php //get_search_form(); ?>
-					<form action="" role="search" method="get" id="searchform" action="<?php echo home_url('/');  ?>">
-						<div class="search">
-							<input type="text" value="" name="s" id="s" placeholder="Tìm kiếm">
-							<button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+					<div class="row">
+						<div class="col-md-2 col-xs-2">
+							<div class="logo_site">
+								<?php 
+								if(has_custom_logo()){
+									the_custom_logo();
+								}
+								else { ?> 
+									<h2><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h2>
+								<?php } ?>
+							</div>
 						</div>
-					</form>
-				</div>
+
+						<div class="col-md-8 col-xs-8">
+							<div class="row">
+								<div class="col-md-3 col-xs-4 col-md-offset-4 col-xs-offset-2 ">
+									<span class="admin_action">
+										<a href="<?php echo wp_login_url(); ?>">Đăng Nhập</a>
+									</span>
+								</div>
+								<div class="col-md-3 col-xs-4">
+									<span class="admin_action">
+										<a href="<?php echo get_site_url('null','/register', 'http'); ?>">Viết Bài</a>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-2 col-xs-2">
+							<div class="search_header">
+								<?php //get_search_form(); ?>
+								<form action="" role="search" method="get" id="searchform" action="<?php echo home_url('/');  ?>">
+									<div class="search">
+										<input type="text" value="" name="s" id="s" placeholder="Tìm kiếm">
+										<button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 				<nav class="nav nav_primary">
