@@ -52,7 +52,7 @@
 								</div>
 								<div class="col-md-3 col-xs-4">
 									<span class="admin_action">
-										<a href="<?php echo get_site_url('null','/register', 'http'); ?>">Viết Bài</a>
+										<a href="<?php echo get_site_url('null','/register', 'http'); ?>">Đăng Ký</a>
 									</span>
 								</div>
 							</div>
