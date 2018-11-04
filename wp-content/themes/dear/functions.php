@@ -339,6 +339,9 @@ function post_love_add_love() {
       $love++;
       update_post_meta($_POST['post_id'], $count_love_key, $love);
       echo $love;
+    }else {
+      update_post_meta($_POST['post_id'], $count_love_key, 1);
+      echo 1;
     }
     die();
 }
