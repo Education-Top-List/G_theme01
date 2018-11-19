@@ -20,7 +20,7 @@ get_header();
 		?>
 	</div>	
 			<div class="row">
-				<div class="col-md-9 col-sm-3  content_left">
+				<div class="col-md-9 col-sm-9  content_left">
 					<?php 
 					$arg_big_post_query = array(
 						'posts_per_page' => 1,
