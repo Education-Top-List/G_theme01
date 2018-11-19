@@ -20,47 +20,60 @@ get_header();
 		$big_post_query->query($arg_big_post_query);
 		?>
 		<div class="hot_big_post_area">
-		
-				<?php if(have_posts()) : 
-					while($big_post_query->have_posts()) : $big_post_query->the_post();
-						?>
-						<div class="col-md-6">
 
-							<div class="hot_big_post pw">
-									<?php 
-										$categories = get_the_category();
-										$seperator = ", ";
-										$output = '';
-										if($categories){
-											foreach ($categories as $category){
-												$output .= '<a href="' . get_category_link($category->term_id) . '"> '. $category-> cat_name . ' </a>' .  $seperator;
+			<?php if(have_posts()) : 
+				while($big_post_query->have_posts()) : $big_post_query->the_post();
+					?>
+					<div class="col-md-6">
+						<div class="hot_big_post ">
+							<div class="cat_post">
+								<?php 
+								$categories = get_the_category();
+								$seperator = ", ";
+								$output = '';
+								if($categories){
+									foreach ($categories as $category){
+										$output .= '<a href="' . get_category_link($category->term_id) . '"> '. $category-> cat_name . ' </a>' .  $seperator;
 
-											}
-											echo trim($output , $seperator);
-										}
-										?>
-								<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-								<div class="post_meta">
-									<p><?php the_time('d m');?> <!-- | by <a href="<?php //echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php //the_author(); ?></a> -->
-									
-									
-									</p>
-								</div>
-								<div class="excerpt">
-									<p><?php echo excerpt(25); ?></p>
-								</div>
+									}
+									echo trim($output , $seperator);
+								}
+								?>
 							</div>
 
+							<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+							
+							<div class="post_meta">
+								<span class="author_post"> 
+									<?php
+									$user = wp_get_current_user();
+									if ( $user ) :
+										?>
+										<img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" />
+									<?php endif; ?>
+									<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php the_author(); ?></a> 
+								</span>
+								<p><?php the_time('d/m');?><a href="<?php the_permalink();?>"></a></p>
+							</div>
+							<div class="excerpt">
+								<p><?php echo excerpt(50); ?></p>
+							</div>
+							<a class="readmore" href="<?php echo the_permalink(); ?>">Read more</a>
 						</div>
-						<div class="col-md-6">
-							<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a></figure>
-						</div>
-						<?php  
-					endwhile;
-				else:
-				endif;
-				?>
-			
+
+					</div>
+					<div class="col-md-6">
+						<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
+						<figure class="thumbnail" style="background:url('<?php echo $image[0]; ?>');"> 
+							<a href="<?php the_permalink();?>"></a>
+						</figure>
+					</div>
+					<?php  
+				endwhile;
+			else:
+			endif;
+			?>
+
 		</div><!-- hot_big_post_area -->
 		<div class="container">
 			<div class="row">
