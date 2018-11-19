@@ -8,71 +8,64 @@ get_header();
 
 <div id="wrap">
 	<div class="g_content">
+		<?php 
+		$arg_big_post_query = array(
+			'posts_per_page' => 1,
+			'orderby' => 'post_date',
+			'order' => 'DESC',
+			'post_type' => 'post',
+			'post_status' => 'publish'
+		);
+		$big_post_query = new WP_Query();
+		$big_post_query->query($arg_big_post_query);
+		?>
+		<div class="hot_big_post_area">
+		
+				<?php if(have_posts()) : 
+					while($big_post_query->have_posts()) : $big_post_query->the_post();
+						?>
+						<div class="col-md-6">
+
+							<div class="hot_big_post pw">
+									<?php 
+										$categories = get_the_category();
+										$seperator = ", ";
+										$output = '';
+										if($categories){
+											foreach ($categories as $category){
+												$output .= '<a href="' . get_category_link($category->term_id) . '"> '. $category-> cat_name . ' </a>' .  $seperator;
+
+											}
+											echo trim($output , $seperator);
+										}
+										?>
+								<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+								<div class="post_meta">
+									<p><?php the_time('d m');?> <!-- | by <a href="<?php //echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php //the_author(); ?></a> -->
+									
+									
+									</p>
+								</div>
+								<div class="excerpt">
+									<p><?php echo excerpt(25); ?></p>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-md-6">
+							<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a></figure>
+						</div>
+						<?php  
+					endwhile;
+				else:
+				endif;
+				?>
+			
+		</div><!-- hot_big_post_area -->
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9 col-sm-9  content_left">
-					<?php 
-					$arg_big_post_query = array(
-						'posts_per_page' => 1,
-						'cat' => 17,
-						'orderby' => 'post_date',
-						'order' => 'DESC',
-						'post_type' => 'post',
-						'post_status' => 'publish'
-					);
-					$big_post_query = new WP_Query();
-					$big_post_query->query($arg_big_post_query);
-					?>
-					<div class="hot_big_post_area">
-						<div class="row">
-							<div class="col-md-9">
-								<?php if(have_posts()) : 
-									while($big_post_query->have_posts()) : $big_post_query->the_post();
-										?>
-										<div class="hot_big_post pw">
-											<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a> </figure>
-											<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-											<div class="excerpt">
-												<p><?php echo excerpt(25); ?></p>
-											</div>
-										</div>
 
-										<?php  
-									endwhile;
-								else:
-								endif;
-								?>
-							</div>
-							<div class="col-md-3">
-								<div class="list_hot_post_others">
-									<?php 
-									$arg_fpost_query = array(
-										'order' => 'DESC',
-										'cat' => 17,
-										'posts_per_page'=>2,
-										'offset'=>1
-									);
-									$exclude_fpost_query = new WP_Query();
-									$exclude_fpost_query->query($arg_fpost_query);
-									?>
-									<?php 
-									if(have_posts()) : 
-										while($exclude_fpost_query->have_posts()) : $exclude_fpost_query->the_post();
-											?>
-											<div class="item_list_hot pw">
-												<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a> </figure>
-												<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-											</div>
-
-											<?php  
-										endwhile;
-									else:
-									endif;
-									?>
-								</div>
-							</div>
-						</div>
-					</div><!-- hot_big_post_area -->
 
 					<div class="focal_week">
 						<div class="lb_focal_week">

@@ -56,5 +56,28 @@
 					}
 					]
 				});
+				// SHOP POPUP
+				
+			jQuery(".nav_primary i.fa-search").click(function(e){
+				var toggleWidth = $(".searchform").width() == 800 ? "0px" : "800px";
+				$('.searchform').animate({ width: toggleWidth},200);
+				jQuery('.popup_search').stop(true,true).fadeIn('300').addClass('pop_active').find('.close_popup').click(function(){
+					jQuery('.popup_search').removeClass('pop_active').fadeOut('300');	
+					$(".searchform").css({'width':'0px'});
+			});
+				jQuery('.popup_search').find('.content_popup').show();
+				e.preventDefault();
+			});
+
+		jQuery(document).click(function(event) {
+ 		 //if you click on anything except the modal itself or the "open modal" link, close the modal
+  		if (!jQuery(event.target).closest(".content_popup,.nav_primary i.fa-search").length) {
+  			jQuery("body").find(".content_popup").hide();
+  				jQuery(".popup").fadeOut(300);
+  				jQuery(".searchform").css({'width':'0px'});
+  			}
+		});
+
+
 	});
 	

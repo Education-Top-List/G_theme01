@@ -38,11 +38,7 @@
 						<h2><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h2>
 					<?php } ?>
 				</div>
-				<div class="search_header">
-					<?php //get_search_form(); ?>
-
-				</div>
-
+		
 				<nav class="nav nav_primary">
 					<?php 
 					$args = array('theme_location' => 'primary');
@@ -56,5 +52,5 @@
 
 	</header>
 	<div class="banner">
-		<?php echo do_shortcode('[metaslider id="220"]'); ?>
+		<?php echo do_shortcode('[metaslider id="240"]'); ?>
 	</div>

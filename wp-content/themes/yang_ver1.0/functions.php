@@ -300,7 +300,7 @@ add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
 // duplicate page
 //add_filter('page_row_actions', 'rd_duplicate_post_link', 10, 2);
 
-  define('BASE_URL', get_site_url('null','/wp-content/themes/doanhnghiep', 'http'));
+  define('BASE_URL', get_site_url('null','/wp-content/themes/yang_ver1.0', 'http'));
 ?>
 
 
