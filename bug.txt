@@ -3,6 +3,5 @@ add-> if($cat || is_wp_error($cat)){
    echo '<li class="parent_cat">' . get_category_parents( $cat, true, '' ) .  '</li>' ;
 }
 
-http://preview.themeforest.net/item/valkyrie-a-highly-visual-ghost-blog/full_screen_preview/22576630?fbclid=IwAR1mkSlGL-KUsQ6yz8tZ4lbhtsquI76-Li7gxB4rl6DHDkEKSj4nV-g5lOQ
-http://preview.themeforest.net/item/lets-blog-responsive-blog-wordpress-theme/full_screen_preview/12340419?fbclid=IwAR2VWzWEuqEj44ssr4GpXc4Nnvqu318Wjlo4pKWLwnnqxJItdnpg51mqgwo
-https://demo.mekshq.com/?theme=opinion
+Post link redirect to dashboard xampp
+RewriteRule . /G_theme01/index.php [L]

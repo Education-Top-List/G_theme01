@@ -53,6 +53,13 @@
 							slidesToShow: 1,
 							slidesToScroll: 1
 						}
+					},
+					{
+						breakpoint: 1920,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1
+						}
 					}
 					]
 				});

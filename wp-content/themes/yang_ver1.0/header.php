@@ -7,6 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 	<?php $url_site =  get_site_url('null','/wp-content/themes/doanhnghiep', 'http');  ?>
 	<!-- css -->
+	<link rel="shortcut icon" href="<?php echo BASE_URL; ?>/images/favicon.ico">
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/slick.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/bootstrap.min.css">

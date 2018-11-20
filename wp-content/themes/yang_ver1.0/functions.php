@@ -296,9 +296,16 @@ function rd_duplicate_post_link( $actions, $post ) {
 }
  
 add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
-
 // duplicate page
 //add_filter('page_row_actions', 'rd_duplicate_post_link', 10, 2);
+
+function pressfore_comment_time_output($date, $d, $comment){
+  return sprintf( _x( '%s trước', '', 'your-text-domain' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
+
+}
+add_filter('get_comment_date', 'pressfore_comment_time_output', 10, 3);
+
+
 
   define('BASE_URL', get_site_url('null','/wp-content/themes/yang_ver1.0', 'http'));
 ?>
