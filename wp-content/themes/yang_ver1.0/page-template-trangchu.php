@@ -95,12 +95,12 @@ get_header();
 							while ($cmt_post_q->have_posts()) : $cmt_post_q->the_post(); ?>
 								<li>
 									<div class="post_cmt_wrapper">
-										
-										<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
-										<figure class="thumbnail" style="background:url('<?php echo $image[0]; ?>');"> 
-											<a href="<?php the_permalink();?>"></a>
-										</figure>
-										<h3><a href="<?php the_permalink(); ?>"" title="<?php the_title(); ?>"><?php the_title(); ?></a> </h3>
+										<div class="wrap_thumb">
+											<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
+											<figure class="thumbnail" style="background:url('<?php echo $image[0]; ?>');"> 
+												<a href="<?php the_permalink();?>"></a>
+											</figure>	
+										</div>
 										<div class="cat_post">
 											<?php 
 											$categories = get_the_category();
@@ -115,7 +115,11 @@ get_header();
 											}
 											?>
 										</div>
-										<span class="wpb-comment-count"><?php comments_popup_link('No Comments;', '1 Comment', '% '); ?><i class="fa fa-comment" aria-hidden="true"></i></span>
+										<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a> </h3>
+										<div class="wrap_cmt_count">
+												<span class="wpb-comment-count"><?php comments_popup_link('No Comments;', '1', '% '); ?><i class="fa fa-comment" aria-hidden="true"></i></span>
+										</div>
+										
 										<div class="post_meta">
 											<span class="author_post"> 
 												<?php
@@ -126,7 +130,7 @@ get_header();
 												<?php endif; ?>
 												<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php the_author(); ?></a> 
 											</span>
-											<p><?php the_time('d/m');?><a href="<?php the_permalink();?>"></a></p>
+
 										</div>
 										<div class="excerpt">
 											<p><?php echo excerpt(50); ?></p>
