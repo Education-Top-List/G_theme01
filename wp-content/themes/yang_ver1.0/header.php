@@ -46,6 +46,7 @@
 					?>
 					<?php wp_nav_menu($args); ?>
 					<i class="fa fa-search"></i>
+					<button class="ajax_login">Login</button>
 				</nav>
 				
 			</div>
