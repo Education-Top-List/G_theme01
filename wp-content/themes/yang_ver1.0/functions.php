@@ -59,7 +59,7 @@ function our_widget_inits(){
 	register_sidebar(array(
 		'name' => 'Sidebar ml',
 		'id' => 'sidebar1',
-		'before_widget' => '<div id="%1$s" class="widget %2$s widget_area">',
+		'before_widget' => '<div id="%1$s" class=" %2$s widget_area">',
 		'after_widget' => "</div>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
@@ -285,6 +285,9 @@ function rd_duplicate_post_as_draft(){
 }
 add_action( 'admin_action_rd_duplicate_post_as_draft', 'rd_duplicate_post_as_draft' );
  
+
+
+
 /*
  * Add the duplicate link to action list for post_row_actions
  */
@@ -299,11 +302,51 @@ add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
 // duplicate page
 //add_filter('page_row_actions', 'rd_duplicate_post_link', 10, 2);
 
+
+
+
+
 function pressfore_comment_time_output($date, $d, $comment){
   return sprintf( _x( '%s trước', '', 'your-text-domain' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
 
 }
 add_filter('get_comment_date', 'pressfore_comment_time_output', 10, 3);
+
+
+
+
+
+/**
+ * ADD INPUT ADD CLASS TO WIDGET
+ *
+ */
+function kc_widget_form_extend( $instance, $widget ) {
+  if ( !isset($instance['classes']) )
+    $instance['classes'] = null;
+
+    $row .= "Class:\t<input type='text' name='widget-{$widget->id_base}[{$widget->number}][classes]' id='widget-{$widget->id_base}-{$widget->number}-classes' class='widefat' value='{$instance['classes']}'/>\n";
+    $row .= "</p>\n";
+
+    echo $row;
+  return $instance;
+}
+add_filter('widget_form_callback', 'kc_widget_form_extend', 10, 2);function kc_widget_update( $instance, $new_instance ) {
+  $instance['classes'] = $new_instance['classes'];
+return $instance;
+}
+add_filter( 'widget_update_callback', 'kc_widget_update', 10, 2 );
+function kc_dynamic_sidebar_params( $params ) {
+  global $wp_registered_widgets;
+  $widget_id    = $params[0]['widget_id'];
+  $widget_obj    = $wp_registered_widgets[$widget_id];
+  $widget_opt    = get_option($widget_obj['callback'][0]->option_name);
+  $widget_num    = $widget_obj['params'][0]['number'];
+
+  if ( isset($widget_opt[$widget_num]['classes']) && !empty($widget_opt[$widget_num]['classes']) )
+    $params[0]['before_widget'] = preg_replace( '/class="/', "class=\"{$widget_opt[$widget_num]['classes']} ", $params[0]['before_widget'], 1 );
+  return $params;
+}
+add_filter( 'dynamic_sidebar_params', 'kc_dynamic_sidebar_params' );
 
 
 

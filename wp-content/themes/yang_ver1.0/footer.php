@@ -15,6 +15,14 @@
 </div>
 <footer class="footer">
 	<div class="container">
+		<div class="logo_ft_social">
+			<img src="<?php echo BASE_URL; ?>/images/ylogo.png" alt="">
+			<ul>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
 		<div class="row">
 			<?php if(is_active_sidebar('footer1')) :?>
 				<div class="footer-widget-area col-md-4">
