@@ -26,7 +26,7 @@ a, a:hover{
 	text-decoration: none !important;
 }
 a:hover{
-    color:#af8fc7;
+    color:#ffa500 ;
 }
 :hover,:focus{
     outline: none !important;
@@ -108,7 +108,7 @@ article.post{
  width: 30px;
  height: 30px;
  border-radius: 50%;
- background: #af8fc7;
+ background: #ffa500 ;
  color: #fff;
  text-align: center;
  line-height: 30px;
@@ -177,7 +177,7 @@ article.post{
   font-size: 14px;
   cursor: pointer;
   color: #fff;
-  /* background: #af8fc7; */
+  /* background: #ffa500 ; */
   padding: 7px 15px;
   text-transform: uppercase;
   display: table;
@@ -484,7 +484,7 @@ span.parent-link{
     height: 535px;
 }
 .hot_big_post_area>.col-md-6:nth-child(1){
-    background: #4d464f;
+    background: #000;
 }
 .hot_big_post_area>.col-md-6:nth-child(1) .post_meta p{
     position: absolute;
@@ -542,14 +542,14 @@ span.parent-link{
    float: right;
 }
 .hot_big_post_area .hot_big_post .cat_post a , .post_cmt_wrapper .cat_post a{
-    color: #af8fc7;
+    color: #ffa500 ;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 16px;
     position: relative;
 }
 .hot_big_post_area .hot_big_post .cat_post a {
-    color:#c7c4c4;
+    color:#ffa500;
 }
 .hot_big_post_area .hot_big_post .cat_post a::before , .post_cmt_wrapper .cat_post a::before{
    position: absolute;
@@ -557,11 +557,11 @@ span.parent-link{
    width: 100%;
    max-width: 30px;
    height: 2px;
-   background: #af8fc7;
+   background: #ffa500 ;
    top: 30px;
 }
 .hot_big_post_area .hot_big_post .cat_post a::before {
-    background:#c7c4c4;
+    background:#ffa500;
 }
 .hot_big_post_area .hot_big_post  .post_meta .author_post{
     display: table;
@@ -604,7 +604,7 @@ span.parent-link{
 }
 
 .pw:hover h2 a , .widget_area a:hover{
-    color:#af8fc7 !important;
+    color:#ffa500  !important;
 }
 
 h2.post_title a{
@@ -615,7 +615,7 @@ h2.post_title a{
  font-weight: 700;
 }
 h2.post_title a:hover{
-	color:#af8fc7;
+	color:#ffa500 ;
 }
 h2.post_title {
 	margin:0px 0px 10px 0px;
@@ -656,7 +656,7 @@ li.widget{
 }
 .hot_big_post  .readmore{
     padding: 10px 25px;
-    background: #af8fc7;
+    background: #ffa500 ;
     border-radius: 20px;
     color: #fff;
     font-weight: 700;
@@ -744,7 +744,7 @@ li.widget{
 	top:10px;
 	height: 5px;
 	border-radius: 50%;
-	background:#af8fc7;
+	background:#ffa500 ;
 }
 .sidebar .widget_area{
 	margin:0px 0px 25px 0px;
@@ -777,7 +777,7 @@ li.widget{
     padding: 12px 10px;
     border-radius: 30px;
     border: none;
-    background: #af8fc7;
+    background: #ffa500 ;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 700;
@@ -785,7 +785,7 @@ li.widget{
     margin:10px 0px 0px 0px;
 }
 .sidebar .widget_categories  {
-        background: #af8fc7;
+        background: #4d464f ;
     padding: 30px;
 }
 
@@ -852,7 +852,7 @@ img.size-full{
     max-width: 100%;
 }
 ul.list_categories{
-    border-bottom: 1px solid #af8fc7;
+    border-bottom: 1px solid #ffa500 ;
 }
 ul.list_categories li{
     display: inline-block;
@@ -906,7 +906,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     font-size: 20px;
 }
 .title_archives strong{
-    color:#af8fc7;
+    color:#ffa500 ;
 }
 .title_archives+ul.list_categories{
     display: none;
@@ -919,7 +919,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     text-transform: uppercase;
     font-weight: 700;
     padding: 0px 0px 0px 15px;
-    border-left: 4px solid #af8fc7;
+    border-left: 4px solid #ffa500 ;
 }
 
 .related_posts{
@@ -953,7 +953,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
    margin:0px 0px 30px 0px;
 }
 .related_posts ul li:hover a{
-    color:#af8fc7;
+    color:#ffa500 ;
 }
 /* end related posts */
 
@@ -1015,7 +1015,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     height: 80px;
 }
 .comment_area #commentform .form-submit input[type="submit"]{
-    background: #af8fc7;
+    background: #ffa500 ;
     border: none;
     color: #fff;
     font-weight: 700;
@@ -1069,7 +1069,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     content: "\f104" !important;
     font: normal normal normal 14px/1 FontAwesome !important;
     font-size: 28px !important;
-    background: #af8fc7;
+    background: #ffa500 ;
     width: 35px;
     height: 35px;
     display: inline-block;
@@ -1082,7 +1082,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
  content: "\f105" !important;
  font: normal normal normal 14px/1 FontAwesome !important;
  font-size: 28px !important;
- background: #af8fc7;
+ background: #ffa500 ;
  width: 35px;
  height: 35px;
  display: inline-block;
@@ -1232,7 +1232,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
  position: absolute;
  top: 0px;
  left: 0px;
- background: #af8fc7;
+ background: #ffa500 ;
  color: #fff;
  padding: 6px 13px;
  text-transform: uppercase;
@@ -1246,7 +1246,7 @@ body.search-results .title_header {
     font-size: 20px;
 }
 body.search-results .title_header strong{
-    color:#af8fc7;
+    color:#ffa500 ;
 }
 
 
@@ -1279,7 +1279,7 @@ body.search-results .title_header strong{
    padding: 10px;
    border-radius: 0px 5px 5px 0px;
    border: none;
-   background: #af8fc7;
+   background: #ffa500 ;
    color: #fff;   
 }
 /* END POPUP SEARCH  */ 
@@ -1330,7 +1330,7 @@ body.search-results .title_header strong{
     font-size: 15px;
 }
 .list_post_news .post_cmt_wrapper:hover h3 a{
-    color:#af8fc7;
+    color:#ffa500 ;
 }
 
 .most-commented>li:nth-child(1){
@@ -1385,14 +1385,14 @@ font-size: 20px;
     position: relative;
 }
 .list_post_comments .post_cmt_wrapper:hover h3 a{
-  color:#e4e4e4 !important;
+  color:#ffc963  !important;
 }
 
 .post_cmt_wrapper .author_post a{
   color:#4D464F;
 }
 .post_cmt_wrapper  .wrap_cmt_count span::after{
-  background:#af8fc7;
+  background:#ffa500 ;
   z-index: 2;
 }
 
@@ -1429,7 +1429,7 @@ font-size: 20px;
     top: 20px;
     width: 60px;
     height: 60px;
-    background: #af8fc7;
+    background: #ffa500 ;
     border-radius: 50%;
     line-height: 60px;
     text-align: center;
@@ -1450,7 +1450,7 @@ font-size: 20px;
     color:#fff;
 }
 .list_post_comments{
-        background: #af8fc7;
+        background: #4d464f;
     padding: 50px 0px;
 }
 
@@ -1541,46 +1541,76 @@ font-size: 20px;
     color: #fff;
     position: relative;
 }
-.footer .news_scroll .post_thumbnail{
-        float: left !important;
-    margin: 0px 10px 0px 0px !important;
-    padding: 0px;
-    border: none;
-    height: 90px;
-}
-.footer .news_scroll .post_thumbnail img{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform:translate(-50%,-50%);
-}
-.footer .news_scroll h2{
-        margin-bottom: 10px;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    max-width: 230px;
-    margin: 0px;
-}
-.footer .news_scroll h2 a{
-      color: #fff;
-    font-size: 13px;
-    line-height: 20px;
-    display: inline-block;
-}
-.footer .news_scroll>.newsdesc{
-    clear: both;
-    margin:0px 0px 20px 0px;
-    display: table;
-    width: 100%;
-    position: relative;
-}
-.footer .news_scroll .post_date{
-    color:#bbb;
-        margin: 50px 0px 0px 0px;
-}
+
 .footer-widget-area li{
     width: 100%;
+}
+.footer ul li .wrap_thumb{
+      float: left;
+    width: 100%;
+    max-width: 120px;
+    margin:0px 20px 0px 0px;
+    overflow:hidden;
+}
+.footer ul li .thumbnail{
+  height: 100px;
+}
+.footer ul li{
+  clear: both;
+  display: table;
+  margin:0px 0px 20px 0px;
+}
+.footer ul li p{
+  display: table;
+}
+.footer ul li p a{
+  color: #fff;
+    font-size: 15px;
+    line-height: 22px;
+}
+.footer ul li span{
+   color:#a9a8a8;
+}
+.footer .cat_post a{
+  color:#fff;
+      text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+}
+.footer .cat_post{
+  display: table;
+  margin:0px 0px 40px 0px;
+}
+.footer .cat_post a::before {
+        position: absolute;
+    content: "";
+    width: 100%;
+    max-width: 30px;
+    height: 2px;
+    background: #fff;
+    top: 30px;
+}
+.copyright{
+  padding:60px 0px 0px 0px;
+  position: relative;
+}
+.copyright::before{
+position: absolute;
+    content: "";
+    width: 100%;
+    max-width: 40px;
+    height: 2px;
+    background: #fff;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+.copyright p{
+      text-align: center;
+    color: #fff;
+    margin: 0px;
 }
 .logo_ft_social{
     text-align: center;

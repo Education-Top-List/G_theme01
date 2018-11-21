@@ -24,22 +24,91 @@
 			</ul>
 		</div>
 		<div class="row">
-			<?php if(is_active_sidebar('footer1')) :?>
+			<?php 
+			$arg_cat_15 = array(
+				'posts_per_page' => 3,
+				'orderby' => 'date',
+				'order' => 'DESC',
+				'post_type' => 'post',
+				'post_status' => 'publish',
+				'cat'=>15
+			);
+			$arg_cat_15_q = new WP_Query();
+			$arg_cat_15_q->query($arg_cat_15);
+			?>
+			<?php if(have_posts()) : ?>
+
 				<div class="footer-widget-area col-md-4">
-					<?php dynamic_sidebar('footer1'); ?>
+					<div class="cat_post">
+					<a href="<?php echo get_category_link($category_id = 15);?>"><?php echo get_cat_name( $category_id = 15 );?></a>
+					</div>
+
+					<ul>
+						<?php
+						while ($arg_cat_15_q->have_posts()) : $arg_cat_15_q->the_post(); ?>
+							<?php get_template_part('loop/loop_post_footer'); ?>
+						<?php endwhile; ?> 
+					</ul>
 				</div>
-			<?php endif ?>
-			<?php if(is_active_sidebar('footer2')) :?>
+			<?php endif; ?>
+
+			<?php 
+			$arg_cat_22 = array(
+				'posts_per_page' => 3,
+				'orderby' => 'date',
+				'order' => 'DESC',
+				'post_type' => 'post',
+				'post_status' => 'publish',
+				'cat'=>22
+			);
+			$arg_cat_22_q = new WP_Query();
+			$arg_cat_22_q->query($arg_cat_22);
+			?>
+			<?php if(have_posts()) : ?>
 				<div class="footer-widget-area  col-md-4">
-					<?php dynamic_sidebar('footer2'); ?>
+					<div class="cat_post">
+						<a href="<?php echo get_category_link($category_id = 22);?>"><?php echo get_cat_name( $category_id = 22 );?></a>
+					</div>
+					<ul>
+						<?php
+						while ($arg_cat_22_q->have_posts()) : $arg_cat_22_q->the_post(); ?>
+							<?php get_template_part('loop/loop_post_footer'); ?>
+						<?php endwhile; ?>
+					</ul>
 				</div>
-			<?php endif ?>
-			<?php if(is_active_sidebar('footer3')) :?>
+			<?php endif; ?> 
+
+			
+			<?php 
+			$arg_cat_23 = array(
+				'posts_per_page' => 3,
+				'orderby' => 'date',
+				'order' => 'DESC',
+				'post_type' => 'post',
+				'post_status' => 'publish',
+				'cat'=>23
+			);
+			$arg_cat_23_q = new WP_Query();
+			$arg_cat_23_q->query($arg_cat_23);
+			?>
+			<?php if(have_posts()) : ?>
 				<div class="footer-widget-area  col-md-4">
-					<?php dynamic_sidebar('footer3'); ?>
+					<div class="cat_post">
+					<a href="<?php echo get_category_link($category_id = 23);?>"><?php echo get_cat_name( $category_id = 23 );?></a>
+					</div>
+					<ul>
+						<?php
+						while ($arg_cat_23_q->have_posts()) : $arg_cat_23_q->the_post(); ?>
+							<?php get_template_part('loop/loop_post_footer'); ?>
+						<?php endwhile; ?>
+					</ul>
 				</div>
-			<?php endif ?>
+			<?php endif; ?> 
 		</div>
+		<div class="copyright">
+			<p>Copyright 2018 · Created by Yang</p>
+		</div>
+
 	</div>
 </footer>
 <?php wp_footer(); ?>
