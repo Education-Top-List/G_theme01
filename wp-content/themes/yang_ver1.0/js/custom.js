@@ -1,7 +1,12 @@
 
 	jQuery(document).ready(function(){
 
-				// SCROLL TO DIV
+	   // SROLLTOP AND ADD CLASS FIXED HEADER
+	     $(window).bind("load", function() {
+   			if(jQuery(window).scrollTop()>50){
+   				jQuery('.header').addClass('fixedheader');
+   			}
+		});
 		jQuery(window).scroll(function(){
 			if(jQuery(this).scrollTop()>500){
 				jQuery('.scrolltop').addClass('go_scrolltop');
@@ -19,6 +24,8 @@
 		      scrollTop: jQuery("html").offset().top
 		    }, 1000);
 		 }); 
+		
+		
 			// SLIDE
 		jQuery('.focal_week ul').slick({
 			dots: true,
@@ -76,27 +83,48 @@
 			e.preventDefault();
 		});
 
-		jQuery(".nav_primary .ajax_login").click(function(e){
+		jQuery(".nav_primary .ajax_sign").click(function(e){
 			jQuery('.popup_login').stop(true,true).fadeIn('300').addClass('pop_active').find('.close_popup').click(function(){
 				jQuery('.popup_login').removeClass('pop_active').fadeOut('300');	
-				jQuery('html').css('overflow','')
 		});
 			jQuery('.popup_login').find('.content_popup').show();
-			jQuery('html').css('overflow','hidden')
 			e.preventDefault();
 		});
 
 
 
-		jQuery(".popup_search").click(function(event) {
+		jQuery(document).click(function(event) {
  		 //if you click on anything except the modal itself or the "open modal" link, close the modal
-  		if (!jQuery(event.target).closest(".content_popup,.nav_primary i.fa-search").length) {
+  		if (!jQuery(event.target).closest(".content_popup,.nav_primary i.fa-search , .ajax_sign").length) {
   			jQuery("body").find(".content_popup").hide();
   				jQuery(".popup").fadeOut(300);
   				jQuery(".searchform").css({'width':'0px'});
   			}
 		});
 
+		var width = jQuery(window).width();
+		if(width>1200){
+			jQuery('.list_post_news .most-commented>li, .list_post_comments .most-commented>li').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+			jQuery('.list_post_random .content_left ul li').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+			jQuery('.hot_big_post_area>.col-md-6:nth-child(1) .post_meta p , .post_cmt_wrapper .wpb-comment-count').attr({"data-wow-delay" : "0.5s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+			jQuery('.home .footer .row>.col-sm-4:nth-child(1)').attr({"data-wow-delay" : "0.3s" , "data-wow-duration" : "2s"}).addClass("wow fadeIn");
+			jQuery('.home .footer .row>.col-sm-4:nth-child(2)').attr({"data-wow-delay" : "0.6s" , "data-wow-duration" : "2s"}).addClass("wow fadeIn");
+			jQuery('.home .footer .row>.col-sm-4:nth-child(3)').attr({"data-wow-delay" : "0.9s" , "data-wow-duration" : "2s"}).addClass("wow fadeIn");
+			jQuery('.home .logo_ft_social ul li:nth-child(1)').attr({"data-wow-delay" : "1.5s" , "data-wow-duration" : "0.5s"}).addClass("wow zoomIn");
+			jQuery('.home .logo_ft_social ul li:nth-child(2)').attr({"data-wow-delay" : "1.7s" , "data-wow-duration" : "0.5s"}).addClass("wow zoomIn");
+			jQuery('.home .logo_ft_social ul li:nth-child(3)').attr({"data-wow-delay" : "1.9s" , "data-wow-duration" : "0.5s"}).addClass("wow zoomIn");
+			jQuery('.home .copyright p').attr({"data-wow-delay" : "2s" , "data-wow-duration" : "1s"}).addClass("wow fadeInUp");
+
+			
+		
+			new WOW().init();
+		}
+		// SHOW LIST MORE COMBO REGISTER HOSTING
+		jQuery('.wrap_content_combo i.fa-angle-down').click(function(){
+			jQuery(this).siblings('ul').find('li.hide_show_li').toggle(300);
+			jQuery(this).toggleClass('rotateIcon');
+			jQuery(this).siblings('span').toggleClass('hide');
+		});
 
 	});
 	

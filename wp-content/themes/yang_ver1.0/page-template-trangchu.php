@@ -154,7 +154,7 @@ get_header();
 				<div class="row">
 					<?php 
 					$arg_cmt_post_q = array(
-						'posts_per_page' => 3,
+						'posts_per_page' => 4,
 						'orderby' => 'comment_count',
 						'order' => 'DESC',
 						'post_type' => 'post',
@@ -226,7 +226,7 @@ get_header();
 					$arg_cmt_post_q = array(
 						'posts_per_page' => 4,
 						'orderby' => 'ID',
-						'order' => 'DESC',
+						'order' => 'ASC',
 						'post_type' => 'post',
 						'post_status' => 'publish'
 					);
