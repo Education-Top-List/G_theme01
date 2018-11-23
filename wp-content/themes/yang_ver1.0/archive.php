@@ -55,10 +55,14 @@ if(have_posts()) :
 							}
 							?>
 						</ul>
-						<?php 
+						<div class="list_post_archive">
+								<?php 
 						while(have_posts()): the_post();
-							get_template_part('content');
+							get_template_part('loop/loop_post_category');
 						endwhile;
+						?>
+						</div>
+					<?php
 					else:
 					endif;
 					wp_reset_postdata();

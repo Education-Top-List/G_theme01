@@ -62,7 +62,7 @@ get_header();
 						</div>
 
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 pw">
 						<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
 						<figure class="thumbnail" style="background:url('<?php echo $image[0]; ?>');"> 
 							<a href="<?php the_permalink();?>"></a>
@@ -97,7 +97,7 @@ get_header();
 							<?php
 							while ($cmt_post_q->have_posts()) : $cmt_post_q->the_post(); ?>
 								<li>
-									<div class="post_cmt_wrapper">
+									<div class="post_cmt_wrapper pw">
 										<div class="wrap_thumb">
 											<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
 											<figure class="thumbnail" style="background:url('<?php echo $image[0]; ?>');"> 
@@ -154,7 +154,7 @@ get_header();
 				<div class="row">
 					<?php 
 					$arg_cmt_post_q = array(
-						'posts_per_page' => 3,
+						'posts_per_page' => 4,
 						'orderby' => 'comment_count',
 						'order' => 'DESC',
 						'post_type' => 'post',
@@ -168,7 +168,7 @@ get_header();
 							<?php
 							while ($cmt_post_q->have_posts()) : $cmt_post_q->the_post(); ?>
 								<li>
-									<div class="post_cmt_wrapper">
+									<div class="post_cmt_wrapper pw">
 										<div class="wrap_thumb">
 											<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
 											<figure class="thumbnail" style="background:url('<?php echo $image[0]; ?>');"> 
@@ -226,7 +226,7 @@ get_header();
 					$arg_cmt_post_q = array(
 						'posts_per_page' => 4,
 						'orderby' => 'ID',
-						'order' => 'DESC',
+						'order' => 'ASC',
 						'post_type' => 'post',
 						'post_status' => 'publish'
 					);
@@ -239,7 +239,7 @@ get_header();
 							<ul>
 								<?php
 								while ($cmt_post_q->have_posts()) : $cmt_post_q->the_post(); ?>
-									<li class="col-sm-6">
+									<li class="col-sm-6 pw">
 										<div class="post_cmt_wrapper">
 											<div class="wrap_thumb">
 												<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>

@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/slick.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/animate.css">
 	<!-- js -->
 	<script src="<?php echo BASE_URL; ?>/js/jquery.min.js"></script>
 	<?php wp_head(); ?>
@@ -46,7 +47,8 @@
 					?>
 					<?php wp_nav_menu($args); ?>
 					<i class="fa fa-search"></i>
-					<button class="ajax_login">Login</button>
+					<button class="ajax_sign">Sign in </button>
+					<button class="ajax_sign">Sign up </button>
 				</nav>
 				
 			</div>
