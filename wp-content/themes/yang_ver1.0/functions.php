@@ -1,5 +1,5 @@
 <?php
-// require_once( get_template_directory() . '/libs/ajax-auth.php' );
+require_once( get_template_directory() . '/libs/ajax-auth.php' );
 function zingvn_resources(){
 	wp_enqueue_style ('style', get_template_directory_uri().'/style.css');
 }
