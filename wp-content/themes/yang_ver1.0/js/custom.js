@@ -4,9 +4,7 @@ jQuery(document).ready(function(){
 	   // SROLLTOP AND ADD CLASS FIXED HEADER
 	   $(window).bind("load", function() {
 	   	if(jQuery(window).scrollTop()>50){
-	   		jQuery('html, body').animate({
-	   			scrollTop: jQuery("html").offset().top
-	   		}, 50);
+	   		jQuery('.header').addClass('fixedheader');
 	   	}
 	   });
 	   jQuery(window).scroll(function(){
