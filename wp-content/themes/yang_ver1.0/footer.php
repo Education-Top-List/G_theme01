@@ -18,7 +18,7 @@
 <div class="popup popup_login" >
 	<div class="content_popup">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-1">
 				<div class="login_p">
 					<h3>Sign in</h3>
 					<form id="login" action="login" method="post">
@@ -34,12 +34,12 @@
 						
 						<input class="submit_button" type="submit" value="Login" name="submit">
 						<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-						<a class="lost" href="<?php echo wp_lostpassword_url(); ?>">Lost your password?</a>
+						<!-- <a class="lost" href="<?php echo wp_lostpassword_url(); ?>">Lost your password?</a> -->
 					</form>
 				</div>
 			</div>
 
-			<div class="col-md-6">
+			<div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-4">
 				<div class="register_p">
 					<h3>Sign up</h3>
 					<form id="register" class="ajax-auth"  action="register" method="post">
@@ -55,10 +55,6 @@
 						<div class="list_group">
 							<label for="signonpassword">Password</label>
 							<input id="signonpassword" type="password" class="required" name="signonpassword" placeholder="Password" >
-						</div>
-						<div class="list_group">
-							<label for="password2">Confirm Password</label>
-							<input type="password" id="password2" class="required" name="password2" placeholder="Confirm password">
 						</div>
 						<input class="submit_button" type="submit" value="SIGNUP">
 						<?php wp_nonce_field('ajax-register-nonce', 'signonsecurity'); ?>    
