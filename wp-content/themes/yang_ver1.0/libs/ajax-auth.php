@@ -12,7 +12,7 @@ function ajax_auth_init(){
     wp_localize_script( 'ajax-auth-script', 'ajax_auth_object', array( 
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
         'redirecturl' => admin_url(),
-        'loadingmessage' => __('Sending user info, please wait...')
+        'loadingmessage' => __('Please wait...')
     ));
 
     // Enable the user with no privileges to run ajax_login() in AJAX

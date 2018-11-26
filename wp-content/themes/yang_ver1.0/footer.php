@@ -25,11 +25,11 @@
 						<p class="status"></p>
 						<div class="list_group">
 							<label for="username">Username</label>
-							<input id="username" type="text" name="username" placeholder="Username">
+							<input id="username" type="text" name="username" class="required" placeholder="Username">
 						</div>
 						<div class="list_group">
 							<label for="password">Password</label>
-							<input id="password" type="password" name="password" placeholder="Password">
+							<input id="password" type="password" name="password" class="required" placeholder="Password">
 						</div>
 						
 						<input class="submit_button" type="submit" value="Login" name="submit">
