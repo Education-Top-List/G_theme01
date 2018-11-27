@@ -4,9 +4,7 @@ jQuery(document).ready(function(){
 	   // SROLLTOP AND ADD CLASS FIXED HEADER
 	   $(window).bind("load", function() {
 	   	if(jQuery(window).scrollTop()>50){
-	   		jQuery('html, body').animate({
-	   			scrollTop: jQuery("html").offset().top
-	   		}, 50);
+	   		jQuery('.header').addClass('fixedheader');
 	   	}
 	   });
 	   jQuery(window).scroll(function(){
@@ -99,7 +97,7 @@ jQuery(document).ready(function(){
 
 
 
-				jQuery(document).click(function(event) {
+		jQuery('.popup_search').click(function(event) {
  		 //if you click on anything except the modal itself or the "open modal" link, close the modal
  		 if (!jQuery(event.target).closest(".content_popup,.nav_primary i.fa-search , .ajax_sign").length) {
  		 	jQuery("body").find(".content_popup").hide();
