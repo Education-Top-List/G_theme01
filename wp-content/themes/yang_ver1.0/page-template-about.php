@@ -2,7 +2,15 @@
 /*
 Template Name: page-template-about
 */
-get_header(); 
-?>	
-<p style="font-size:20px;text-align:center;display:block;margin:40px 0px;"> Nội dung sẽ sớm được cập nhật </p>
-<?php get_footer(); ?>
+?>
+<?php get_header(); ?>
+<body <?php body_class(); ?>>
+	
+</body>
+<?php
+if ( have_posts() ) : while ( have_posts() ) : the_post();
+						the_content();
+					endwhile; else: ?>
+					<p>Sorry, no posts matched your criteria.</p>
+<?php endif; ?>
+
