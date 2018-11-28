@@ -24,6 +24,12 @@ get_header();
 			<?php if(have_posts()) : 
 				while($big_post_query->have_posts()) : $big_post_query->the_post();
 					?>
+					<div class="col-md-6 pw">
+						<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
+						<figure class="thumbnail" style="background:url('<?php echo $image[0]; ?>');"> 
+							<a href="<?php the_permalink();?>"></a>
+						</figure>
+					</div>
 					<div class="col-md-6">
 						<div class="hot_big_post ">
 							<div class="cat_post">
@@ -62,12 +68,7 @@ get_header();
 						</div>
 
 					</div>
-					<div class="col-md-6 pw">
-						<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
-						<figure class="thumbnail" style="background:url('<?php echo $image[0]; ?>');"> 
-							<a href="<?php the_permalink();?>"></a>
-						</figure>
-					</div>
+					
 					<?php  
 				endwhile;
 			else:
@@ -220,72 +221,17 @@ get_header();
 		</div>
 		<div class="list_post_random">
 			<div class="container">
-				<h2 class="title_tg_top">Góc tản mạn</h2>
+				<h2 class="title_tg_top">Video</h2>
 				<div class="row">
-						<?php 
-					$arg_cmt_post_q = array(
-						'posts_per_page' => 4,
-						'orderby' => 'ID',
-						'order' => 'ASC',
-						'post_type' => 'post',
-						'post_status' => 'publish'
-					);
-					$cmt_post_q = new WP_Query();
-					$cmt_post_q->query($arg_cmt_post_q);
-					?>
+				
 					<div class="col-sm-8 content_left">
-						<div class="row">
-							<?php if(have_posts()) : ?>
-							<ul>
-								<?php
-								while ($cmt_post_q->have_posts()) : $cmt_post_q->the_post(); ?>
-									<li class="col-sm-6 pw">
-										<div class="post_cmt_wrapper">
-											<div class="wrap_thumb">
-												<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
-												<figure class="thumbnail" style="background:url('<?php echo $image[0]; ?>');"> 
-													<a href="<?php the_permalink();?>"></a>
-												</figure>	
-											</div>
-											<div class="cat_post">
-												<?php 
-												$categories = get_the_category();
-												$seperator = ", ";
-												$output = '';
-												if($categories){
-													foreach ($categories as $category){
-														$output .= '<a href="' . get_category_link($category->term_id) . '"> '. $category-> cat_name . ' </a>' .  $seperator;
+						<?php
+if ( have_posts() ) : while ( have_posts() ) : the_post();
+						the_content();
+					endwhile; else: ?>
+					<p>Sorry, no posts matched your criteria.</p>
+<?php endif; ?>
 
-													}
-													echo trim($output , $seperator);
-												}
-												?>
-											</div>
-											<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a> </h3>
-											<div class="wrap_cmt_count">
-												<span class="wpb-comment-count"><b><?php the_time('d/m');?></b><a href="<?php the_permalink();?>"></a></span>
-											</div>
-
-											<div class="post_meta">
-												<span class="author_post"> 
-													<?php
-													$user = wp_get_current_user();
-													if ( $user ) :
-														?>
-														<img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" />
-													<?php endif; ?>
-													<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php the_author(); ?></a> 
-												</span>
-
-											</div>
-					
-										</div>
-
-									</li>
-								<?php endwhile; ?>
-								<?php endif; ?> 
-							</ul>
-						</div>
 					</div>
 					<div class="col-sm-4 sidebar">
 							<?php dynamic_sidebar('sidebar1'); ?> 
