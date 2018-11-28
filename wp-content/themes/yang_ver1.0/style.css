@@ -1732,6 +1732,51 @@ font-size: 20px;
 
 /* END ARCHIVE*/
 
+/* PAGE TEMPLATE ABOUT*/
+
+.page-template-page-template-about{
+    background:url(images/bg_about.jpg) no-repeat;
+    background-size: 100%;
+}
+.page-template-page-template-about .banner ,  .page-template-page-template-about .header{
+    display: none;
+}
+.page-template-page-template-about .title_about {
+    height: 250px;
+    position: relative;
+}
+.page-template-page-template-about .title_about h1{
+        position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 600px;
+    width: 100%;
+    color: #fff;
+    margin: 0px;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+}
+.page-template-page-template-about .title_about h1 span{
+       text-transform: initial;
+    display: block;
+    font-size: 25px;
+    margin: 20px 0px 0px 0px;
+}
+.page-template-page-template-about  .text_about {
+    color:#fff;
+    text-align: justify;
+    max-width: 700px;
+}
+.page-template-page-template-about  .text_about h3.widget-title{
+    font-size: 25px;
+    text-align: center;
+}
+.page-template-page-template-about  .text_about .textwidget p{
+    line-height: 26px;
+}
+/* END PAGE TEMPLATE ABOUT */
 
 /* CSS FOOTER */
 .footer{
