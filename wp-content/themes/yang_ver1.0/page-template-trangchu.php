@@ -44,15 +44,12 @@ get_header();
 							<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 							
 							<div class="post_meta">
-								<span class="author_post"> 
-									<?php
-									$user = wp_get_current_user();
-									if ( $user ) :
-										?>
-										<img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" />
-									<?php endif; ?>
-									<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php the_author(); ?></a> 
-								</span>
+									<span class="author_post"> 
+										<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
+											<?php echo get_avatar(get_the_author_meta('ID')); ?>
+											<?php the_author(); ?>
+										</a> 
+									</span>
 								<p><?php the_time('d/m');?><a href="<?php the_permalink();?>"></a></p>
 							</div>
 							<div class="excerpt">
@@ -125,13 +122,10 @@ get_header();
 										
 										<div class="post_meta">
 											<span class="author_post"> 
-												<?php
-												$user = wp_get_current_user();
-												if ( $user ) :
-													?>
-													<img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" />
-												<?php endif; ?>
-												<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php the_author(); ?></a> 
+												<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
+													<?php echo get_avatar(get_the_author_meta('ID')); ?>
+													<?php the_author(); ?>
+												</a> 
 											</span>
 
 										</div>
@@ -155,7 +149,8 @@ get_header();
 					<?php 
 					$arg_cmt_post_q = array(
 						'posts_per_page' => 4,
-						'orderby' => 'comment_count',
+						'meta_key' => 'wpb_post_views_count',
+						'orderby' => 'meta_value_num',
 						'order' => 'DESC',
 						'post_type' => 'post',
 						'post_status' => 'publish'
@@ -191,18 +186,19 @@ get_header();
 										</div>
 										<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a> </h3>
 										<div class="wrap_cmt_count">
-											<span class="wpb-comment-count"><?php comments_popup_link('0', '1', '% '); ?><i class="fa fa-comment" aria-hidden="true"></i></span>
+											<span class="wpb-comment-count">
+												<i class="fa fa-comment" aria-hidden="true">
+													<p><?php echo wpb_get_post_views(get_the_ID()); ?></p>
+												</i>
+												</span>
 										</div>
 										
 										<div class="post_meta">
 											<span class="author_post"> 
-												<?php
-												$user = wp_get_current_user();
-												if ( $user ) :
-													?>
-													<img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" />
-												<?php endif; ?>
-												<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php the_author(); ?></a> 
+												<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
+													<?php echo get_avatar(get_the_author_meta('ID')); ?>
+													<?php the_author(); ?>
+												</a> 
 											</span>
 
 										</div>
@@ -268,15 +264,11 @@ get_header();
 
 											<div class="post_meta">
 												<span class="author_post"> 
-													<?php
-													$user = wp_get_current_user();
-													if ( $user ) :
-														?>
-														<img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" />
-													<?php endif; ?>
-													<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php the_author(); ?></a> 
+													<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
+														<?php echo get_avatar(get_the_author_meta('ID')); ?>
+														<?php the_author(); ?>
+													</a> 
 												</span>
-
 											</div>
 					
 										</div>
