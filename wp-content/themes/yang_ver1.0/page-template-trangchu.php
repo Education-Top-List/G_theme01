@@ -219,44 +219,14 @@ get_header();
 			<div class="container">
 				<h2 class="title_tg_top">Video</h2>
 				<div class="row">
-				
 					<div class="col-sm-8 content_left">
 						<?php
-if ( have_posts() ) : while ( have_posts() ) : the_post();
-						the_content();
-					endwhile; else: ?>
-					<p>Sorry, no posts matched your criteria.</p>
-<?php endif; ?>
-
-<<<<<<< HEAD
-=======
-													}
-													echo trim($output , $seperator);
-												}
-												?>
-											</div>
-											<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a> </h3>
-											<div class="wrap_cmt_count">
-												<span class="wpb-comment-count"><b><?php the_time('d/m');?></b><a href="<?php the_permalink();?>"></a></span>
-											</div>
-
-											<div class="post_meta">
-												<span class="author_post"> 
-													<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
-														<?php echo get_avatar(get_the_author_meta('ID')); ?>
-														<?php the_author(); ?>
-													</a> 
-												</span>
-											</div>
-					
-										</div>
-
-									</li>
-								<?php endwhile; ?>
-								<?php endif; ?> 
-							</ul>
-						</div>
->>>>>>> 4dc21d56d2bc459b6d2468b8c7878ca5968b2efe
+							if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+							endwhile; else: ?>
+							<p>Sorry, no posts matched your criteria.</p>
+						<?php endif; ?>
+				
 					</div>
 					<div class="col-sm-4 sidebar">
 							<?php dynamic_sidebar('sidebar1'); ?> 
