@@ -13,9 +13,7 @@ get_header();
 					<div class="bg_title_single" style="background:url('<?php echo $image[0]; ?>')">
 						<div class="container">
 							<div class="single_post_info">
-								<h2><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>
-								<p><?php the_time('d-m-Y');?><span>  <?php the_time('g:i a') ?></span> | by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php the_author(); ?></a>
-									| Posted in 
+								<div class="section-category">
 									<?php	
 									$categories = get_the_category();
 									$seperator = ", ";
@@ -28,7 +26,15 @@ get_header();
 										echo trim($output , $seperator);
 									}
 									?>
-								</p>
+								</div>
+								
+								<h2><a href="#"><?php the_title(); ?></a></h2>
+									<div class="row auth-single">
+										<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
+											<?php echo get_avatar(get_the_author_meta('ID')); ?>
+											<?php the_author(); ?>
+										</a> 
+									</div>
 							</div>
 						</div>
 					</div>

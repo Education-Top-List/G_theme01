@@ -150,7 +150,7 @@ get_header();
 
 		<div class="list_post_comments">
 			<div class="container">
-				<h2 class="title_tg_top">Bài viết nhiều phản hồi nhất</h2>
+				<h2 class="title_tg_top">Bài viết nổi bật nhất</h2>
 				<div class="row">
 					<?php 
 					$arg_cmt_post_q = array(
