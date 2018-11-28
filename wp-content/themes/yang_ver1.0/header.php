@@ -48,7 +48,12 @@
 					?>
 					<?php wp_nav_menu($args); ?>
 					<i class="fa fa-search"></i>
-					<button class="ajax_sign">Sign in/up </button>
+					<?php
+						if (!is_user_logged_in()) {
+    						echo "<button class='ajax_sign'>Sign in/up </button>";
+						}
+					?>
+					
 				</nav>
 				
 			</div>

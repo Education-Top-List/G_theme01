@@ -1,11 +1,10 @@
 <?php 
 get_header(); 
 ?>	
-
-
 <div id="wrap">
 	<div class="g_content">
 		<?php 
+		wpb_set_post_views(get_the_ID());
 		if(have_posts()) :
 			while(have_posts()) : the_post(); ?>
 				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -13,9 +12,7 @@ get_header();
 					<div class="bg_title_single" style="background:url('<?php echo $image[0]; ?>')">
 						<div class="container">
 							<div class="single_post_info">
-								<h2><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>
-								<p><?php the_time('d-m-Y');?><span>  <?php the_time('g:i a') ?></span> | by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php the_author(); ?></a>
-									| Posted in 
+								<div class="section-category">
 									<?php	
 									$categories = get_the_category();
 									$seperator = ", ";
@@ -28,7 +25,8 @@ get_header();
 										echo trim($output , $seperator);
 									}
 									?>
-								</p>
+								</div>
+								<h2><a href="#"><?php the_title(); ?></a></h2>
 							</div>
 						</div>
 					</div>
@@ -48,33 +46,17 @@ get_header();
 									<div class="text_content">
 										<?php  the_content(); ?>
 									</div>
+									<div class="row auth-single">
+										<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
+											<?php echo get_avatar(get_the_author_meta('ID')); ?>
+											<?php the_author(); ?>
+										</a>
+										
+									</div>
 								</article>
 
 								<!-- fb-comment-area -->
-								<!-- <div class="fb-comments" data-href="<?php //echo get_permalink();  ?>" data-width="855" data-numposts="20" data-colorscheme="light"></div> -->
-								<div class="comment_area">
-									<h3 class="title_bl">Bình luận(<?php echo comments_number( '0', '1', '%' ); ?>)</h3>
-									<?php
-									$comments_args = array(
-
-        							// change the title of send button 
-										'label_submit'=>'Gửi',
-        							// change the title of the reply section
-										'title_reply'=>'Để lại bình luận',
-        							// remove "Text or HTML to be displayed after the set of comment fields"
-										'comment_notes_after' => '',
-        							// redefine your own textarea (the comment body)
-										'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . ' <?php  ?></label><br /><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
-									);
-
-									comment_form($comments_args);
-									?>
-									<div class="list_comments">
-										<?php if( is_single() ) : ?>
-											<?php comments_template(); ?>      
-										<?php endif; // close to check single.php ?>
-									</div>
-								</div>
+								<div class="fb-comments" data-href="<?php //echo get_permalink();  ?>" data-width="855" data-numposts="20" data-colorscheme="light"></div>
 
 								<?php $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 6, 'post__not_in' => array($post->ID) ) ); ?>
 								<?php if($related){ ?>
@@ -117,9 +99,6 @@ get_header();
 
 			</div>
 		</div>
-
-
-		
 	</div>
 </div>
 

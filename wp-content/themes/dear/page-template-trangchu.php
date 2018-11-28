@@ -166,7 +166,7 @@ get_header();
 			<?php 
 			$argsQuery = array(
 				'posts_per_page'   => 10,
-				'meta_key' => 'wpb_post_love_count',
+				'meta_key' => 'wpb_post_views_count',
 				'orderby' => 'meta_value_num',
 				'order' => 'DESC'
 			);
