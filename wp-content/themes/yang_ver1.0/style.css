@@ -358,7 +358,7 @@ article.post{
 }
 .popup_login {
     background-image: url('images/bg.jpg');
-
+    background-size: cover;
 }
 
 .popup_login:before {
