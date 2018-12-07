@@ -29,7 +29,7 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 
 /** Hostname của database */
-define('DB_HOST', 'localhost');
+define('DB_HOST', '138.197.101.168');
 
 /** Database charset sử dụng để tạo bảng database. */
 define('DB_CHARSET', 'utf8');

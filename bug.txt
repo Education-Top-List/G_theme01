@@ -2,3 +2,6 @@ Recoverable fatal error: Object of class WP_Error could not be converted to stri
 add-> if($cat || is_wp_error($cat)){
    echo '<li class="parent_cat">' . get_category_parents( $cat, true, '' ) .  '</li>' ;
 }
+
+Post link redirect to dashboard xampp
+RewriteRule . /G_theme01/index.php [L]

@@ -26,6 +26,7 @@ define('DB_NAME', 'gtheme01');
 define('DB_USER', 'root');
 
 /** Mật khẩu của database */
+// define('DB_PASSWORD', '');
 define('DB_PASSWORD', '');
 
 /** Hostname của database */
