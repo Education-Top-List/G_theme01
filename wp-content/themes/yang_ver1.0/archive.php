@@ -55,13 +55,13 @@ if(have_posts()) :
 							}
 							?>
 						</ul>
-						<div class="list_post_archive">
+						<ul class="list_post_category row">
 								<?php 
 						while(have_posts()): the_post();
 							get_template_part('loop/loop_post_category');
 						endwhile;
 						?>
-						</div>
+						</ul>
 					<?php
 					else:
 					endif;
