@@ -1826,10 +1826,50 @@ font-size: 20px;
 
 /* PAGE TEMPLATE ABOUT*/
 
+.page-template-page-template-about [class*="about-"]{
+    position: relative;
+}
+.page-template-page-template-about [class*="about-"]::before{
+    content:"";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background:rgba(0,0,0,0.7);
+    z-index: 0;
+}
+
 .page-template-page-template-about{
-    background:url(images/bg_about.jpg) no-repeat;
+    background:;
     background-size: 100%;
 }
+.about-1{
+    height: 900px;
+    background-repeat: no-repeat !important;
+    background-size: 100%;
+    background-position: center center;
+    
+}
+.about-1 .textwidget{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+}
+.about-1 .textwidget h1{
+          color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+}
+.about-1 .textwidget h1 span{
+        display: block;
+    margin: 40px 0px 0px 0px;
+    font-size: 25px;
+}
+
 .page-template-page-template-about .banner ,  .page-template-page-template-about .header{
     display: none;
 }
