@@ -1,7 +1,7 @@
 /*
 Theme Name: Yang ver 1.0
-Author: Hoàng Trường Giang - 0363349096
-Description: Lập trình viên Front End, chuyên cắt html, css, responsive website. 
+Author: HoÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ng TrÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âng Giang - 0363349096
+Description: LÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­p trÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬nh viÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âªn Front End, chuyÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âªn cÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯t html, css, responsive website. 
 Version: 1.0
 Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 This theme, like WordPress, is licensed under the GPL.
@@ -18,13 +18,13 @@ html{
     font-family: gotham;
 }
 ul{
-	padding:0px;
-	margin:0px;
-	list-style:none;
+    padding:0px;
+    margin:0px;
+    list-style:none;
 }
 
 a, a:hover{
-	text-decoration: none !important;
+    text-decoration: none !important;
 }
 a:hover{
     color:#ffa500 ;
@@ -43,8 +43,8 @@ body{
     overflow-x: hidden;
 }
 .container{
-	max-width: 1170px;
-	margin:0px auto;
+    max-width: 1170px;
+    margin:0px auto;
     width: 100%;
 }
 img{
@@ -70,7 +70,7 @@ img{
     display: block;
 }
 .nav_primary ul li {
-	float:left;
+    float:left;
     position: relative;
 }
 .nav_primary ul li a{
@@ -149,7 +149,7 @@ img{
 /* sub-menu*/
 
 article.post{
-	clear:both;
+    clear:both;
 }
 .nav_primary ul li a:hover , .nav_primary i.fa-search:hover , .header button[class*="ajax_"]:hover , .single_post_info .section-category a:hover{
     -webkit-mask-image: linear-gradient(-75deg, rgba(210, 176, 138, 0.6) 30%, #d2b08a 50%, rgba(210, 176, 138, 0.6) 70%);
@@ -159,7 +159,7 @@ article.post{
     color: #fff;
 }
 #content{
-	clear: both;
+    clear: both;
 }
 .scrolltop {
     bottom: 20px;
@@ -426,6 +426,39 @@ input:visited{
 .overflow-y{
     overflow-y:hidden;
 }
+/*  MOUSE SCROLL*/
+
+.scroll-downs {
+  position: absolute;
+  top: initial;
+  right: 0;
+  bottom: 15em;
+  left: 0;
+  margin: auto;
+  width :34px;
+  height: 55px;
+  cursor:pointer;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: mouse_scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+/* END  MOUSE SCROLL*/
 /* CSS HEADER */
 
 
@@ -515,9 +548,9 @@ input:visited{
 /* CSS HEADER */
 
 .box_note_right{
-	padding:10px;
-	border:1px solid #000;
-	background:#ccc;
+    padding:10px;
+    border:1px solid #000;
+    background:#ccc;
 }
 span.parent-link{
     float: left;
@@ -531,9 +564,9 @@ span.parent-link{
  width: 100%;
 }
 .short_nav ul li{
-	float:left;
-	padding:5px 10px;
-	
+    float:left;
+    padding:5px 10px;
+    
 }
 .short_nav ul li a{
     font-size: 18px;
@@ -704,7 +737,7 @@ span.parent-link{
     margin:0px 0px 10px 0px;
 }
 .post_wrapper_content{
-	display: table;
+    display: table;
 }
 .item_list_hot{
     margin:0px 0px 20px 0px;
@@ -722,17 +755,17 @@ h2.post_title a{
  font-weight: 700;
 }
 h2.post_title a:hover{
-	color:#ffa500 ;
+    color:#ffa500 ;
 }
 h2.post_title {
-	margin:0px 0px 10px 0px;
+    margin:0px 0px 10px 0px;
 }
 .excerpt p{
-	font-size: 13px;
+    font-size: 13px;
 }
 
 li.widget{
-	display: block !important;
+    display: block !important;
 }
 .g_content{
     margin:40px 0px 0px 0px;
@@ -806,25 +839,25 @@ li.widget{
     top: 35px;
 }
 .sidebar table{
-	width: 100%;
+    width: 100%;
 }
 .sidebar table tr, .sidebar table td , .sidebar table th{
-	border:1px solid #000;
-	text-align: center;
+    border:1px solid #000;
+    text-align: center;
 }
 .sidebar table td , .sidebar table th{
-	padding:5px 0px;
+    padding:5px 0px;
 }
 .sidebar iframe{
-	max-width: 100% !important
+    max-width: 100% !important
 }
 .sidebar img{
-	width: 100%;
-	height:auto;
+    width: 100%;
+    height:auto;
 }
 
 .fb-like{
-	display: none !important;
+    display: none !important;
 }
 .sidebar [id*="recent-posts"] ul li{
     padding: 0px 0px 10px 15px;
@@ -833,27 +866,27 @@ li.widget{
     border-bottom: 1px dashed #e6e6e6;
 }
 .sidebar [id*="recent-posts"] ul li a{
-	color:#000;
+    color:#000;
 }
 .sidebar [id*="recent-posts"] ul{
-	padding:0px 10px;
+    padding:0px 10px;
 }
 .sidebar [id*="recent-posts"] ul li:last-child{
-	border-bottom: none;
-	padding:0px 0px 0px 15px;
+    border-bottom: none;
+    padding:0px 0px 0px 15px;
 }
 .sidebar [id*="recent-posts"] ul li::before{
-	position: absolute;
-	left: 0px;
-	content:"";
-	width: 5px;
-	top:10px;
-	height: 5px;
-	border-radius: 50%;
-	background:#ffa500 ;
+    position: absolute;
+    left: 0px;
+    content:"";
+    width: 5px;
+    top:10px;
+    height: 5px;
+    border-radius: 50%;
+    background:#ffa500 ;
 }
 .sidebar .widget_area{
-	margin:0px 0px 25px 0px;
+    margin:0px 0px 25px 0px;
 }
 .sidebar .widget_black_studio_tinymce {
     border:none;
@@ -921,7 +954,7 @@ li.widget{
 
 }
 .breadcrumb li{
-	display: inline;
+    display: inline;
 }
 
 .breadcrumb ul li::after{
@@ -930,7 +963,7 @@ li.widget{
  font:normal normal normal 14px/1 FontAwesome;
 }
 .breadcrumb ul li:last-child::after{
-	content:"";
+    content:"";
 }
 
 .breadcrumb ul li a {
@@ -946,7 +979,7 @@ li.widget{
 
 
 img.size-full{
-	max-width: 100%;
+    max-width: 100%;
 }
 
 .fb_iframe_widget, .fb_iframe_widget>span,  .fb_iframe_widget iframe{
@@ -1843,39 +1876,91 @@ font-size: 20px;
     background:;
     background-size: 100%;
 }
-.about-1{
-    height: 900px;
-    background-repeat: no-repeat !important;
-    background-size: 100%;
-    background-position: center center;
-    
+.page-template-page-template-about [class*="about-"]{
+     background-repeat: no-repeat !important;
+     background-size: cover;
+     background-position: center center;
+     height: 900px;
+     border-bottom: 1px solid #fff;
 }
-.about-1 .textwidget{
+.page-template-page-template-about .about-1{
+   height: 1000px;
+}
+.about-1 .welcome_y{
     position: absolute;
-    top:50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 2;
+    max-width: 900px;
+    width: 100%;
+
 }
-.about-1 .textwidget h1{
-          color: #fff;
+.about-1 .welcome_y h4{
+        color: #fff;
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 55px;
 }
-.about-1 .textwidget h1 span{
+.about-1 .welcome_y h4 span{
         display: block;
-    margin: 40px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
     font-size: 25px;
 }
-
+.about-2 .textwidget , .about-3 .textwidget , .about-4 .textwidget , .about-5 .textwidget {
+ position: relative;
+    z-index: 1;
+    max-width: 700px;
+    display: table;
+    margin:0px auto;
+    width: 100%;
+}
+.about-2 .textwidget p , .about-3 .textwidget p , .about-4 .textwidget p , .about-5 .textwidget p{
+    color:#fff;
+    font-size: 19px;
+    line-height: 35px;
+    margin: 0px 0px 40px 0px;
+}
+.about-5  .textwidget i{
+    margin: 45px 0px 0px 0px;
+    display: block;
+}
+.about-5  .textwidget  p a{
+    font-weight: 700;
+    color:#fff;
+}
+.page-template-page-template-about{
+    overflow: hidden;
+}
+[id*="pg-"], [id*="pl-"] .so-panel{
+    margin:0px !important;
+}
 .page-template-page-template-about .banner ,  .page-template-page-template-about .header{
     display: none;
 }
-.page-template-page-template-about .title_about {
-    height: 250px;
-    position: relative;
+
+.page-template-page-template-about .widget-title{
+       position: relative;
+       z-index: 1;
+       color: #fff;
+       text-align: center;
+       margin: 2.5em 0em 2em 0em;
+       text-transform: uppercase;
+       font-size: 45px;
+       padding: 0px 0px 20px 0px;
+}
+.page-template-page-template-about .widget-title::before{
+    position: absolute;
+    content:url(images/before_title_about.png);
+    bottom: -35px;
+    display: table;
+    left: 0px;
+    right: 0px;
+    margin:0px auto;
+    text-align: center;
+    max-width: 255px;
+    width: 199%;
 }
 .page-template-page-template-about .title_about h1{
         position: absolute;
@@ -1908,6 +1993,10 @@ font-size: 20px;
 .page-template-page-template-about  .text_about .textwidget p{
     line-height: 26px;
 }
+.page-template-page-template-about .footer{
+    display: none;
+}
+
 /* END PAGE TEMPLATE ABOUT */
 
 /* CSS RAU */
@@ -1921,7 +2010,7 @@ font-size: 20px;
 
 /* CSS FOOTER */
 .footer{
-	    border-top: none;
+        border-top: none;
     padding: 35px 0px 35px 0px;
     margin: 40px 0px 0px 0px;
     background: #4d464f;
@@ -1943,7 +2032,7 @@ font-size: 20px;
  margin: 0px;
 }
 .footer  h3.widget-title{
-	    margin: 0px 0px 20px 0px;
+        margin: 0px 0px 20px 0px;
     color: #fff;
     position: relative;
 }
@@ -2192,6 +2281,13 @@ position: absolute;
      .list_post_news .most-commented>li:nth-child(1){
         display: none;
      }
+}
+
+
+@keyframes mouse_scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
 }
 
 

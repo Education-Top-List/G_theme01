@@ -348,6 +348,7 @@ function kc_dynamic_sidebar_params( $params ) {
 }
 add_filter( 'dynamic_sidebar_params', 'kc_dynamic_sidebar_params' );
 
+
 //view 
 function wpb_set_post_views($postID) {
     $count_key = 'wpb_post_views_count';
