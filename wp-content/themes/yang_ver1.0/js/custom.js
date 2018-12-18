@@ -24,11 +24,11 @@ jQuery(document).ready(function(){
 	   		scrollTop: jQuery("html").offset().top
 	   	}, 1000);
 	   }); 
-       jQuery('.scroll-downs').click(function (){
-      jQuery('html, body').animate({
-        scrollTop: jQuery(".about-2").offset().top
-      }, 1000);
-     }); 
+	   jQuery('.scroll-downs').click(function (){
+	   	jQuery('html, body').animate({
+	   		scrollTop: jQuery("#about-2").offset().top
+	   	}, 700);
+	   }); 
 
 			// SLIDE
 			jQuery('.focal_week ul').slick({
@@ -101,7 +101,7 @@ jQuery(document).ready(function(){
 
 
 
-		jQuery('.popup_search').click(function(event) {
+				jQuery('.popup_search').click(function(event) {
  		 //if you click on anything except the modal itself or the "open modal" link, close the modal
  		 if (!jQuery(event.target).closest(".content_popup,.nav_primary i.fa-search , .ajax_sign").length) {
  		 	jQuery("body").find(".content_popup").hide();
@@ -112,34 +112,45 @@ jQuery(document).ready(function(){
  		});
 
 
-	
+
 
 		 // ANIMATION INDEX
-				var width = jQuery(window).width();
-				if(width>1200){
-					jQuery('.list_post_news .most-commented>li, .list_post_comments .most-commented>li').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-					jQuery('.list_post_random .content_left ul li').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-					jQuery('.hot_big_post_area>.col-md-6:nth-child(1) .post_meta p , .post_cmt_wrapper .wpb-comment-count').attr({"data-wow-delay" : "0.5s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-					jQuery('.home .footer .row>.col-sm-4:nth-child(1)').attr({"data-wow-delay" : "0.3s" , "data-wow-duration" : "2s"}).addClass("wow fadeIn");
-					jQuery('.home .footer .row>.col-sm-4:nth-child(2)').attr({"data-wow-delay" : "0.6s" , "data-wow-duration" : "2s"}).addClass("wow fadeIn");
-					jQuery('.home .footer .row>.col-sm-4:nth-child(3)').attr({"data-wow-delay" : "0.9s" , "data-wow-duration" : "2s"}).addClass("wow fadeIn");
-					jQuery('.home .logo_ft_social ul li:nth-child(1)').attr({"data-wow-delay" : "1.5s" , "data-wow-duration" : "0.5s"}).addClass("wow zoomIn");
-					jQuery('.home .logo_ft_social ul li:nth-child(2)').attr({"data-wow-delay" : "1.7s" , "data-wow-duration" : "0.5s"}).addClass("wow zoomIn");
-					jQuery('.home .logo_ft_social ul li:nth-child(3)').attr({"data-wow-delay" : "1.9s" , "data-wow-duration" : "0.5s"}).addClass("wow zoomIn");
-					jQuery('.home .copyright p').attr({"data-wow-delay" : "2s" , "data-wow-duration" : "1s"}).addClass("wow fadeInUp");
-          jQuery('.page-template-page-template-about .about-1 .welcome_y h4').attr({"data-wow-delay" : "0.5s", "data-wow-duration" : "1.5s"}).addClass("wow animated zoomIn ");
-          jQuery('.page-template-page-template-about .scroll-downs').attr({"data-wow-delay" : "2s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-          jQuery('.page-template-page-template-about .widget-title').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
-          jQuery('.page-template-page-template-about .textwidget>p:nth-child(1)').attr({"data-wow-delay" : "0.5s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-          jQuery('.page-template-page-template-about .textwidget>p:nth-child(2)').attr({"data-wow-delay" : "0.7s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-          jQuery('.page-template-page-template-about .textwidget>i').attr({"data-wow-delay" : "0.7s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+		 var width = jQuery(window).width();
+		 if(width>1200){
+		 	jQuery('.list_post_news .most-commented>li, .list_post_comments .most-commented>li').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+		 	jQuery('.list_post_random .content_left ul li').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+		 	jQuery('.hot_big_post_area>.col-md-6:nth-child(1) .post_meta p , .post_cmt_wrapper .wpb-comment-count').attr({"data-wow-delay" : "0.5s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+		 	jQuery('.home .footer .row>.col-sm-4:nth-child(1)').attr({"data-wow-delay" : "0.3s" , "data-wow-duration" : "2s"}).addClass("wow fadeIn");
+		 	jQuery('.home .footer .row>.col-sm-4:nth-child(2)').attr({"data-wow-delay" : "0.6s" , "data-wow-duration" : "2s"}).addClass("wow fadeIn");
+		 	jQuery('.home .footer .row>.col-sm-4:nth-child(3)').attr({"data-wow-delay" : "0.9s" , "data-wow-duration" : "2s"}).addClass("wow fadeIn");
+		 	jQuery('.home .logo_ft_social ul li:nth-child(1)').attr({"data-wow-delay" : "1.5s" , "data-wow-duration" : "0.5s"}).addClass("wow zoomIn");
+		 	jQuery('.home .logo_ft_social ul li:nth-child(2)').attr({"data-wow-delay" : "1.7s" , "data-wow-duration" : "0.5s"}).addClass("wow zoomIn");
+		 	jQuery('.home .logo_ft_social ul li:nth-child(3)').attr({"data-wow-delay" : "1.9s" , "data-wow-duration" : "0.5s"}).addClass("wow zoomIn");
+		 	jQuery('.home .copyright p').attr({"data-wow-delay" : "2s" , "data-wow-duration" : "1s"}).addClass("wow fadeInUp");
+		 	  jQuery('.page-template-page-template-about #about-1 .welcome_y h4').attr({"data-wow-delay" : "0.5s", "data-wow-duration" : "1.5s"}).addClass("wow animated zoomIn ");
+              jQuery('.page-template-page-template-about #about-1  .scroll-downs').attr({"data-wow-delay" : "2s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+		 	new WOW().init();
+		 }
+	
+	    jQuery(".aio_content_page").onepage_scroll({
+            sectionContainer: ".section",
+            easing: "ease", //"ease", "linear", "ease-in",
+            animationTime: 1000,
+            pagination: true, 
+            updateURL: true, 
+            beforeMove: function(index) {
+          		   jQuery('.section.active  .widget-title').addClass("animated slideInUp");;
+          		   jQuery('.section.active .textwidget').addClass("animated slideInUp");;
+          		   jQuery('.section.active #about-1 .textwidget').removeClass("animated slideInUp");;
+            },
+            afterMove: function(index) {
+            }, 
+            loop: true,                  
+            keyboard: true,                
+            responsiveFallback: false,
+            direction: "vertical" //vertical,horizontal
+        });
 
 
-					new WOW().init();
-				}
-
-
-
-
-	});
+		});
 

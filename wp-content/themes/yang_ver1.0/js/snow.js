@@ -637,7 +637,7 @@
   }
 
   function doStart() {
-    if (!storm.excludeMobile || !isMobile) {
+    if (storm.excludeMobile || !isMobile) {
       doDelayedStart();
     }
     // event cleanup
