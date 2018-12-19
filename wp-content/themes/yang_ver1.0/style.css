@@ -956,6 +956,7 @@ img.size-full{
 }
 ul.list_categories{
     border-bottom: 1px solid #4d464f ;
+    margin:0px 0px 30px 0px;
 }
 ul.list_categories li{
     display: inline-block;
@@ -1550,7 +1551,7 @@ body.search-results .title_header strong{
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
 }
-.list_post_news .wpb-comment-count b , .list_post_random .wpb-comment-count b{
+[class*="list_post"] .wpb-comment-count b{
     color:#fff;
     position: relative;
     z-index: 3;
@@ -1792,37 +1793,32 @@ font-size: 20px;
 
 /* ARCHIVE */
 
-.list_post_archive .list_post_item .wrap_thumb {
-   overflow: hidden;
-    float: left;
+.list_post_category .list_post_item .wrap_thumb {
+     overflow: hidden;
+    float: none;
     width: 100%;
     max-width: 100%;
-    height: 170px;
-    max-width: 230px;
-    margin: 0px 30px 0px 0px;
+    height: 270px;
+ 
 }
-.list_post_archive .list_post_item:last-child{
+.list_post_category .list_post_item:last-child{
     border-bottom: none;
 }
-.list_post_archive .list_post_item .thumbnail{
-    margin: 0px 30px 0px 0px;
-    float: left;
-
+.list_post_category .list_post_item .thumbnail{
+     float: none;
     width: 100%;
     height: 100%;
 }
-.list_post_archive .list_post_item .thumbnail img{
+.list_post_category .list_post_item .thumbnail img{
     max-width: 100%;
     height: auto;
 }
-.list_post_archive .list_post_item{
-    clear: both;
+.list_post_category .list_post_item{
     display: table;
-    border-bottom: 1px dashed #e6e6e6;
-    padding: 25px 0px;
-    width: 100%;
+    width: 50%;
+    margin: 0px 0px 35px 0px;
 }
-.list_post_archive .list_post_item:last-child{
+.list_post_category .list_post_item:last-child{
     border-bottom: none;
 }
 
