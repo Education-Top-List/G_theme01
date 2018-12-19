@@ -173,6 +173,13 @@
 <script src="<?php echo BASE_URL; ?>/js/slick.js"></script>
 <script src="<?php echo BASE_URL; ?>/js/custom.js"></script>
 <script src="<?php echo BASE_URL; ?>/js/snow.js"></script>
-<script src="<?php echo BASE_URL; ?>/js/onepage-scroll.js"></script>
+<?php 
+	if ( is_page_template( 'page-template-about.php' ) ) {
+    ?>
+    <script src="<?php echo BASE_URL; ?>/js/onepage-scroll.js"></script>
+    <?php
+	} 
+?>
+	
 </body>
 </html>

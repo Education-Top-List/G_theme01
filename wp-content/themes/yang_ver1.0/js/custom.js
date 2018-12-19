@@ -132,16 +132,17 @@ jQuery(document).ready(function(){
 		 	new WOW().init();
 		 }
 	
-	    jQuery(".aio_content_page").onepage_scroll({
-            sectionContainer: ".section",
+	 if(jQuery("body").hasClass('page-template-page-template-about')){
+		 	jQuery(".aio_content_page").onepage_scroll({
+		 		sectionContainer: ".section",
             easing: "ease", //"ease", "linear", "ease-in",
             animationTime: 1000,
             pagination: true, 
             updateURL: true, 
             beforeMove: function(index) {
-          		   jQuery('.section.active  .widget-title').addClass("animated slideInUp");;
-          		   jQuery('.section.active .textwidget').addClass("animated slideInUp");;
-          		   jQuery('.section.active #about-1 .textwidget').removeClass("animated slideInUp");;
+            	jQuery('.section.active  .widget-title').addClass("animated slideInUp");;
+            	jQuery('.section.active .textwidget').addClass("animated slideInUp");;
+            	jQuery('.section.active #about-1 .textwidget').removeClass("animated slideInUp");;
             },
             afterMove: function(index) {
             }, 
@@ -150,6 +151,7 @@ jQuery(document).ready(function(){
             responsiveFallback: false,
             direction: "vertical" //vertical,horizontal
         });
+		 }
 
 
 		});
