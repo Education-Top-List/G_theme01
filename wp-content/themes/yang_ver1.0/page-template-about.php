@@ -13,6 +13,7 @@ Template Name: page-template-about
 		<p>Sorry, no posts matched your criteria.</p>
 	<?php endif; ?>
 </div>
+<embed src="<?php echo BASE_URL; ?>/sound/thuong.mp3" autostart="true"></embed>
 </body>
 
 

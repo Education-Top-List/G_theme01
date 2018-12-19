@@ -1865,7 +1865,8 @@ font-size: 20px;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 2;
-    max-width: 900px;
+    max-width: 10
+    00px;
     width: 100%;
 
 }
@@ -1874,7 +1875,7 @@ font-size: 20px;
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
-    font-size: 55px;
+    font-size: 50px;
 }
 #about-1 .welcome_y h4 span{
         display: block;
