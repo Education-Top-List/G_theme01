@@ -2327,10 +2327,24 @@ position: absolute;
      .list_post_news .most-commented>li:nth-child(1){
         display: none;
      }
-     #about-1 .welcome_y{
-        top:30%;
-        padding: 0px 10px;
+      #about-1{
+      min-height: 350px;
+      position: relative;
      }
+     #about-1 .welcome_y{
+       top: 50%;
+    padding: 0px 10px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    max-width: 100%;
+    width: 100%;
+     }
+     .scroll-downs{
+      display: none;
+     }
+    
+
      .page-template-page-template-about #about-1 .welcome_y h4 {
     font-size: 30px;
     line-height: 45px;
@@ -2340,16 +2354,25 @@ position: absolute;
     line-height: 22px;
      }
      .page-template-page-template-about .widget-title{
-        font-size: 35px;
-        line-height: 45px;
-        margin:2.5em 0em 1.5em 0em;
+        font-size: 25px;
+        line-height: 40px;
+        margin:1.5em 0em 1.5em 0em;
      }
      #about-2 .textwidget p, #about-3 .textwidget p, #about-4 .textwidget p, #about-5 .textwidget p{
             font-size: 15px;
     line-height: 32px;
     margin:0px 0px 15px 0px;
      }
-}
+     .page-template-page-template-about .section::before{
+      background:rgba(0,0,0,0.3);
+     }
+     #about-5 .textwidget i{
+      margin:15px 0px 0px 0px;
+     }
+    #about-2 .textwidget, #about-3 .textwidget, #about-4 .textwidget, #about-5 .textwidget{
+      margin:0px 0px 30px 0px;
+    }
+  }
 
 @media(min-width: 400px) and (max-width: 767px){
     .scroll-downs{

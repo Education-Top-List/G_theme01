@@ -131,8 +131,8 @@ jQuery(document).ready(function(){
               jQuery('.page-template-page-template-about #about-1  .scroll-downs').attr({"data-wow-delay" : "2s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
 		 	new WOW().init();
 		 }
-	
-	    jQuery(".aio_content_page").onepage_scroll({
+		if(width>1100){
+				    jQuery(".aio_content_page").onepage_scroll({
             sectionContainer: ".section",
             easing: "ease", //"ease", "linear", "ease-in",
             animationTime: 1000,
@@ -149,7 +149,9 @@ jQuery(document).ready(function(){
             keyboard: true,                
             responsiveFallback: false,
             direction: "vertical" //vertical,horizontal
-        });
+        });	
+		}
+
 
 
 		});
