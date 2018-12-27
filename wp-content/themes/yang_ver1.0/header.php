@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/animate.css">
+	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/style.css">
 	<!-- js -->
 	<script src="<?php echo BASE_URL; ?>/js/jquery.min.js"></script>
 	<?php wp_head(); ?>
