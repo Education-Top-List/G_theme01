@@ -12,7 +12,11 @@ Template Name: page-template-about
 		endwhile; else: ?>
 		<p>Sorry, no posts matched your criteria.</p>
 	<?php endif; ?>
+
 </div>
+	<div class="back_home">
+		<a href="<?php echo get_home_url(); ?>"><img src="<?php echo BASE_URL; ?>/images/icon_prev_white.png"></a>
+	</div>
 </body>
 
 
