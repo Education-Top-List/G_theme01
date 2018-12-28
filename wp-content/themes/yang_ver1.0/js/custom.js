@@ -178,7 +178,7 @@ jQuery(document).ready(function(){
             pagination: true, 
             updateURL: true, 
             beforeMove: function(index) {
-            	jQuery('.section.active  .widget-title').addClass("animated zoomIn");;
+            	jQuery('.section.active  .widget-title').addClass("animated slideInUp");
             	jQuery('.section.active .textwidget').addClass("animated slideInUp");;
             	jQuery('.section.active #about-1 .textwidget').removeClass("animated slideInUp");;
             },

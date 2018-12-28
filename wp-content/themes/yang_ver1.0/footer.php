@@ -175,14 +175,11 @@
 <script src="<?php echo BASE_URL; ?>/js/snow.js"></script>
 
 <?php 
-if(!wp_is_mobile()){
 	if ( is_page_template( 'page-template-about.php' ) ) {
-		?>
-		<script src="<?php echo BASE_URL; ?>/js/onepage-scroll.js"></script>
-		<?php
+    ?>
+    <script src="<?php echo BASE_URL; ?>/js/onepage-scroll.js"></script>
+    <?php
 	} 
-}
-
 ?>
 </body>
 </html>
