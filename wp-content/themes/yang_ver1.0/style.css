@@ -1894,6 +1894,12 @@ font-size: 20px;
        font-size: 45px;
        padding: 0px 0px 20px 0px;
 }
+.page-template-page-template-about embed{
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	z-index: -1;
+}
 .page-template-page-template-about .widget-title::before{
     position: absolute;
     content:url(images/before_title_about.png);
@@ -2028,7 +2034,7 @@ font-size: 20px;
 body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   position: inherit;
 }
-   
+
 
 /* END ONE PAGE SCROLL*/
 
