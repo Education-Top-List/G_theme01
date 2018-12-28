@@ -9,8 +9,9 @@ add_action('wp_enqueue_scripts','zingvn_resources');
 	// Navigation menus 
 register_nav_menus(array(
 	'primary' => __('Primary Menu'),
-	'footer' => __('Footer Menu')
+	'menu_mobile' => __('Mobile Menu')
 ));
+
 
 	// Get top ancestor id
 function get_top_ancestor_id(){
@@ -347,6 +348,7 @@ function kc_dynamic_sidebar_params( $params ) {
   return $params;
 }
 add_filter( 'dynamic_sidebar_params', 'kc_dynamic_sidebar_params' );
+
 
 //view 
 function wpb_set_post_views($postID) {

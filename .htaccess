@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# BEGIN WordPress
+>>>>>>> e8b2c3bb412f10e3b3a0b6aac19a6ab6cc4d3208
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
@@ -6,3 +10,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
+<<<<<<< HEAD
+=======
+
+php_value upload_max_filesize 128M
+php_value post_max_size 128M
+php_value max_execution_time 300
+php_value max_input_time 300
+>>>>>>> e8b2c3bb412f10e3b3a0b6aac19a6ab6cc4d3208

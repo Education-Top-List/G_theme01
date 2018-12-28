@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/animate.css">
+	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/style.css">
 	<!-- js -->
 	<script src="<?php echo BASE_URL; ?>/js/jquery.min.js"></script>
 	<?php wp_head(); ?>
@@ -29,7 +30,20 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 <body <?php body_class() ?>>
 	
+	<div class="bg_opacity"></div>
+	<?php if ( wp_is_mobile() ) { ?>
+		<div id="menu_mobile_full">
+			<nav class="mobile-menu">
+				<p class="close_menu"><span><i class="fa fa-times" aria-hidden="true"></i></span></p>
+				<?php 
+				$args = array('theme_location' => 'menu_mobile');
+				?>
+				<?php wp_nav_menu($args);?>
+			</nav>
+		</div>
+	<?php }?>
 	<header class="header">
+
 		<div class="wrap_inner_header">
 			<div class="container">
 				<div class="logo_site">
@@ -58,7 +72,7 @@
 				
 			</div>
 		</div>
-
+		<span class="icon_mobile_click"><i class="fa fa-bars" aria-hidden="true"></i></span>
 	</header>
 	<div class="banner">
 		<?php echo do_shortcode('[metaslider id="240"]'); ?>
