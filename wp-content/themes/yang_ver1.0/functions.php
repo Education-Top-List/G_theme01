@@ -350,7 +350,7 @@ function kc_dynamic_sidebar_params( $params ) {
 add_filter( 'dynamic_sidebar_params', 'kc_dynamic_sidebar_params' );
 
 
-//view 
+//SHOW POST COUNT VIEWS 
 function wpb_set_post_views($postID) {
     $count_key = 'wpb_post_views_count';
     $count = get_post_meta($postID, $count_key, true);
@@ -374,7 +374,8 @@ function wpb_get_post_views($postID){
     }
     return $count.'';
 }
-//end view
+// END SHOW POST COUNT VIEWS
+
 
 
 
