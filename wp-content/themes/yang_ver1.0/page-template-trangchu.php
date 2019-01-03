@@ -219,15 +219,7 @@ get_header();
 			<div class="container">
 				<h2 class="title_tg_top">Video</h2>
 				<div class="row">
-			<!-- 		<div class="col-sm-8 content_left">
-						<?php
-							if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-							endwhile; else: ?>
-							<p>Sorry, no posts matched your criteria.</p>
-						<?php endif; ?>
-				
-					</div> -->
+
 					<div class="col-sm-8 content_left">
 						<div class="row">
 							<?php if(have_posts()) : ?>

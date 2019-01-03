@@ -17,7 +17,10 @@ Template Name: page-template-about
 	<div class="back_home">
 		<a href="<?php echo get_home_url(); ?>"><img src="<?php echo BASE_URL; ?>/images/icon_prev_white.png"></a>
 	</div>
-<embed src="<?php echo BASE_URL; ?>/sound/thuong.mp3" autostart="true"></embed>
+<?php if(!wp_is_mobile()){ ?>
+	<embed src="<?php echo BASE_URL; ?>/sound/thuong.mp3" autostart="true"></embed>
+<?php } ?>	
+
 </body>
 
 

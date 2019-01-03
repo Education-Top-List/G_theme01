@@ -27,7 +27,7 @@ define('DB_USER', 'root');
 
 /** Mật khẩu của database */
 // define('DB_PASSWORD', '');
-define('DB_PASSWORD', '123456789aA@');
+define('DB_PASSWORD', '');
 
 /** Hostname của database */
 define('DB_HOST', 'localhost');

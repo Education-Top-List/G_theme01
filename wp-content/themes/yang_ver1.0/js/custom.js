@@ -169,8 +169,8 @@ jQuery(document).ready(function(){
               jQuery('.page-template-page-template-about #about-1  .scroll-downs').attr({"data-wow-delay" : "2s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
 		 	new WOW().init();
 		 }
-	
-	 if(jQuery("body").hasClass('page-template-page-template-about')){
+	if(width>1140){
+			 if(jQuery("body").hasClass('page-template-page-template-about')){
 		 	jQuery(".aio_content_page").onepage_scroll({
 		 		sectionContainer: ".section",
             easing: "ease", //"ease", "linear", "ease-in",
@@ -178,7 +178,7 @@ jQuery(document).ready(function(){
             pagination: true, 
             updateURL: true, 
             beforeMove: function(index) {
-            	jQuery('.section.active  .widget-title').addClass("animated slideInUp");
+            	jQuery('.section.active  .widget-title').addClass("animated zoomIn");
             	jQuery('.section.active .textwidget').addClass("animated slideInUp");;
             	jQuery('.section.active #about-1 .textwidget').removeClass("animated slideInUp");;
             },
@@ -190,6 +190,8 @@ jQuery(document).ready(function(){
             direction: "vertical" //vertical,horizontal
         });
 		 }
+	}
+
 
 
 		});

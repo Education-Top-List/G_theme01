@@ -6,17 +6,25 @@ get_header();
 
 <div id="content">
 	<div class="container">
-		<div class="list_post">
+	<div class="list_post">
+		
+
+
+			<h2 class="title_search">Kết quả tìm kiếm : <strong><?php the_search_query(); ?></strong></h2>
 			<?php 
 			if(have_posts()): ?>
-				<h2 class="title_header">Search result for : <strong><?php the_search_query(); ?></strong></h2>
-				<?php	while(have_posts()): the_post(); 
-					
-				get_template_part('content');
-				
+				<ul class="list_post_search row">
+				<?php
+
+				while(have_posts()): the_post(); 
+				get_template_part('loop/loop_search');
 				 endwhile;
+				 ?>
+				 </ul>
+				<?php get_template_part('includes/pagination');?>
+				<?php
 			else:
-				echo '<p> No found content</p>';
+				echo '<p class="no_found_content"> Không tìm thấy nội dung bạn vừa nhập</p>';
 			endif;
 			wp_reset_postdata();
 			?>

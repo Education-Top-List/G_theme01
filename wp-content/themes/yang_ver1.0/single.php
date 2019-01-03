@@ -45,14 +45,21 @@ get_header();
 								<article class="wrap_content_text">
 									<div class="text_content">
 										<?php  the_content(); ?>
+										<div class="auth-single">
+											<div class="auth_img">
+												<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
+													<?php echo get_avatar(get_the_author_meta('ID')); ?>
+												</a>
+											</div>
+											<div class="auth_name">
+												<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
+													<?php the_author(); ?>
+												</a>	
+											</div>
+										</div>
+										<?php echo do_shortcode('[Sassy_Social_Share]');?>
 									</div>
-									<div class="row auth-single">
-										<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
-											<?php echo get_avatar(get_the_author_meta('ID')); ?>
-											<?php the_author(); ?>
-										</a>
-										
-									</div>
+									
 								</article>
 
 								<!-- fb-comment-area -->

@@ -18,7 +18,7 @@
 <div class="popup popup_login" >
 	<div class="content_popup">
 		<div class="row">
-			<div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-1">
+			<div class="col-sm-5">
 				<div class="login_p">
 					<h3>Sign in</h3>
 					<form id="login" action="login" method="post">
@@ -39,7 +39,7 @@
 				</div>
 			</div>
 
-			<div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-4">
+			<div class="col-sm-5 col-sm-offset-2">
 				<div class="register_p">
 					<h3>Sign up</h3>
 					<form id="register" class="ajax-auth"  action="register" method="post">
@@ -175,11 +175,14 @@
 <script src="<?php echo BASE_URL; ?>/js/snow.js"></script>
 
 <?php 
+if(!wp_is_mobile()){
 	if ( is_page_template( 'page-template-about.php' ) ) {
-    ?>
-    <script src="<?php echo BASE_URL; ?>/js/onepage-scroll.js"></script>
-    <?php
+		?>
+		<script src="<?php echo BASE_URL; ?>/js/onepage-scroll.js"></script>
+		<?php
 	} 
+}
+
 ?>
 </body>
 </html>
