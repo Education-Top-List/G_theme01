@@ -8,7 +8,7 @@ if(have_posts()) :
 		<div class="g_content">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-9 col-sm-3  content_left">
+					<div class="col-md-9 col-sm-8  content_left">
 						<?php 
 						if(is_category()){
 							//echo '<h3 class="title_archives">' . single_cat_title() . '</h3>';
@@ -70,7 +70,7 @@ if(have_posts()) :
 					?>
 				</div>
 				<?php  if(have_posts()) : ?>
-					<div class="col-md-3 col-sm-3 sidebar">
+					<div class=" col-md-3 col-sm-4 sidebar">
 						<?php dynamic_sidebar('sidebar1'); ?> 
 					</div>
 				<?php endif ?>
