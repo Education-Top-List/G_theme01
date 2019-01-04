@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Cấu hình cơ bản cho WordPress
  *
@@ -27,7 +27,7 @@ define('DB_USER', 'root');
 
 /** Mật khẩu của database */
 // define('DB_PASSWORD', '');
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', '123456789aA@');
 
 /** Hostname của database */
 define('DB_HOST', 'localhost');
